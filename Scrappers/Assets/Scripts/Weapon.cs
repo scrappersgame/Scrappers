@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour {
 	public float EffectSpawnRate = 10;
 	public LayerMask Targets;
 	public Transform BulletTrailPrefab;
+	public Transform MuzzleFlashPrefab;
 	private Vector2 firePointPosition;
 
 	float timeToSpawnEffect = 0;
@@ -59,7 +60,12 @@ public class Weapon : MonoBehaviour {
 		if (xDifference < 0){
 			RotationOffset = 180;
 		}
-		Transform bulletInstance = Instantiate (BulletTrailPrefab, firePointPosition, firePoint.rotation);
+		Transform bulletInstance = Instantiate (BulletTrailPrefab, firePointPosition, firePoint.rotation) as Transform;
 		bulletInstance.Rotate (Vector3.forward * RotationOffset);
+		Transform muzzleFlashInstance = Instantiate (MuzzleFlashPrefab, firePointPosition, firePoint.rotation) as Transform;
+		muzzleFlashInstance.parent = firePoint;
+		float size = Random.Range (0.6f, 0.9f);
+		muzzleFlashInstance.localScale = new Vector3 (size, size, size);
+		Destroy (muzzleFlashInstance.gameObject, 0.02f);
 	}
 }
