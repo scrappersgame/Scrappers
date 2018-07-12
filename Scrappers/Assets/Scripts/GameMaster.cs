@@ -9,7 +9,6 @@ public class GameMaster : MonoBehaviour {
 	void Start (){
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
-			gm.StartCoroutine(gm.SpawnPlayer (0));
 		}
 	}
 	public Transform playerPrefab;

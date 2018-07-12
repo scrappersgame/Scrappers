@@ -316,7 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fb2883e2bb442018ceb384e223d473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  KillZone: {fileID: 0}
   playerStats:
     Health: 100
 --- !u!114 &114670727045045016

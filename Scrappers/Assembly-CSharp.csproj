@@ -51,10 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\CinemachineExamples\Scenes\Scripting\ScriptingExample.cs" />
      <Compile Include="Assets\Materials\GradientSky\Scripts\Common\GradientSkyCommon.cs" />
      <Compile Include="Assets\Materials\GradientSky\Scripts\GradientSkyCamera.cs" />
      <Compile Include="Assets\Materials\GradientSky\Scripts\GradientSkyObject.cs" />
+     <Compile Include="Assets\PlaceTiles.cs" />
      <Compile Include="Assets\Scripts\ArmRotation.cs" />
      <Compile Include="Assets\Scripts\GameMaster.cs" />
      <Compile Include="Assets\Scripts\MoveTrail.cs" />

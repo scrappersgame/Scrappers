@@ -45,7 +45,7 @@ public class Tiling : MonoBehaviour {
 				MakeNewBuddy(-1);
 				hasLeftBuddy = true;
 			}
-
+				
 		}
 	}
 	// fuction to create buddy, requires side indicator (-1 or 1)
@@ -66,4 +66,5 @@ public class Tiling : MonoBehaviour {
 			newBuddy.GetComponent<Tiling>().hasRightBuddy = true;
 		}
 	}
+
 }
