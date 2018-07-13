@@ -12,17 +12,18 @@ public class GameMaster : MonoBehaviour {
 		}
 	}
 	public Transform playerPrefab;
-	public Transform spawnPoint;
+	public static Vector3 spawnPosition;
+	public static Quaternion spawnRotation;
 
 	public IEnumerator SpawnPlayer (int spawnDelay){
 		Debug.Log ("Add respawn options");
 		yield return new WaitForSeconds (spawnDelay);
-		Transform playerObj = Instantiate (playerPrefab, spawnPoint.position, spawnPoint.rotation);
+		Transform playerObj = Instantiate (playerPrefab, spawnPosition, spawnRotation);
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
 
 	}
 	public static void KillPlayer (Player player){
 		Destroy (player.gameObject);
-		gm.StartCoroutine(gm.SpawnPlayer (2));
+		gm.StartCoroutine(gm.SpawnPlayer (0));
 	}
 }

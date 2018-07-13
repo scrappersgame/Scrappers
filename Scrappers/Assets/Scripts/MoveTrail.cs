@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class MoveTrail : MonoBehaviour {
 
-	public int moveSpeed = 1;
+	public int moveSpeed = 100;
 	// Update is called once per frame
 	void Update () {
 		transform.Translate (Vector3.right * Time.deltaTime * moveSpeed);
-		Destroy (gameObject, 1);
+		Destroy (gameObject, 3);
+	}
+	void OnCollisionEnter (Collision col){
+		Debug.Log ("Hit");
+		Destroy (gameObject);
 	}
 }

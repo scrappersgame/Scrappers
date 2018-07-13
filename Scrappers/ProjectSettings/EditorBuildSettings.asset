@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
+    guid: b8415f830ae8844f096c6ee33727d339
+  - enabled: 1
+    path: Assets/Scenes/Starting Area.unity
+    guid: 095f493f8e7df442b84ca412748cbf07
+  - enabled: 1
+    path: Assets/Scenes/Moon Area.unity
+    guid: e5f95bb3e9f4c4865b5ffe2953673190
