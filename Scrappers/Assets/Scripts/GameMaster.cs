@@ -22,10 +22,9 @@ public class GameMaster : MonoBehaviour {
 	void LateUpdate(){
 		bool pause = Input.GetKey (KeyCode.Escape);
 		if (pause && player != null && player.activeSelf == true) {
-			pauseMenu.SetActive (true);
-			player.SetActive (false);
-			pause = false;
-		} 	
+			PauseGame();
+		}
+        pause = false;
 	}
 	public Transform playerPrefab;
 	public Transform spawnPrefab;
@@ -50,5 +49,9 @@ public class GameMaster : MonoBehaviour {
 	public static void KillPlayer (Player player){
 		Destroy (player.gameObject);
 		gm.SpawnPlayer (2);
+	}
+	public void PauseGame(){
+		pauseMenu.SetActive (true);
+		player.SetActive (false);
 	}
 }
