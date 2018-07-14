@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	private Transform KillZone;
+	public static bool playerPaused = true;
 
 	[System.Serializable]
 	public class PlayerStats {

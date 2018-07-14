@@ -7,6 +7,9 @@ TagManager:
   - GM
   - KZ
   - CamControl
+  - Fire
+  - TileMap
+  - Sounds
   layers:
   - Default
   - TransparentFX

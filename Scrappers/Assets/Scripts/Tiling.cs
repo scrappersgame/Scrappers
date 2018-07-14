@@ -29,6 +29,9 @@ public class Tiling : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (cam == null) {
+			cam = Camera.main;
+		}
 		if (hasLeftBuddy == false || hasRightBuddy == false){
 			// calculate how far the camera extends
 			float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;

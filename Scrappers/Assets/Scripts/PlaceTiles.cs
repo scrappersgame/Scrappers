@@ -17,8 +17,7 @@ public class PlaceTiles : MonoBehaviour {
 
 	private void Awake(){
 		cam = Camera.main;
-		GameMaster.spawnPosition = transform.position;
-		GameMaster.spawnRotation = transform.rotation;
+		theTileMap = GameObject.FindGameObjectWithTag ("TileMap").GetComponent<Tilemap>();
 		currentCell = theTileMap.WorldToCell(transform.position);
 		groundLevel = currentCell.y - 1;
 		placeCell = new Vector3Int ( currentCell.x, groundLevel, currentCell.z);
@@ -27,6 +26,9 @@ public class PlaceTiles : MonoBehaviour {
 	// do late so that the player has a chance to move in update if necessary
 	private void LateUpdate()
 	{
+		if (theTileMap == null) {
+			theTileMap = GameObject.FindGameObjectWithTag ("TileMap").GetComponent<Tilemap>();
+		}
 		float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;
 		placeDistance = camHorizontalExtend + 5;
 		// get current grid location
@@ -36,32 +38,36 @@ public class PlaceTiles : MonoBehaviour {
 
 		// if the position has changed
 		if (currentCell != previous) {
-			for (int i = 0; i < placeDistance; i++){
-				for (int ii = 0; ii < placeDepth; ii++) {
-					placeCell = new Vector3Int (currentCell.x + i, groundLevel - ii, currentCell.z);
-					
-					// set the new tile
-					Sprite currentTile = theTileMap.GetSprite(placeCell);
-					if (currentTile == null) {
-						theTileMap.SetTile (placeCell, TileToPlace);
-					}
-				}
-			}
-			for (int i = 0; i > 0-placeDistance; i--){
-				for (int ii = 0; ii < placeDepth; ii++) {
-					placeCell = new Vector3Int (currentCell.x + i, groundLevel - ii, currentCell.z);
-
-					// set the new tile
-					Sprite currentTile = theTileMap.GetSprite (placeCell);
-					if (currentTile == null) {
-						theTileMap.SetTile (placeCell, TileToPlace);
-					}
-				}
-			}
-
+			// spawn the floor
+			SpawnFloor ();
 			// save the new position for next frame
 			previous = currentCell;
 		}
 	}
+	public void SpawnFloor() {
+		//place tiles to the right
+		for (int i = 0; i < placeDistance; i++){
+			for (int ii = 0; ii < placeDepth; ii++) {
+				placeCell = new Vector3Int (currentCell.x + i, groundLevel - ii, currentCell.z);
 
+				// set the new tile
+				Sprite currentTile = theTileMap.GetSprite(placeCell);
+				if (currentTile == null) {
+					theTileMap.SetTile (placeCell, TileToPlace);
+				}
+			}
+		}
+		//place tiles to the left
+		for (int i = 0; i > 0-placeDistance; i--){
+			for (int ii = 0; ii < placeDepth; ii++) {
+				placeCell = new Vector3Int (currentCell.x + i, groundLevel - ii, currentCell.z);
+
+				// set the new tile
+				Sprite currentTile = theTileMap.GetSprite (placeCell);
+				if (currentTile == null) {
+					theTileMap.SetTile (placeCell, TileToPlace);
+				}
+			}
+		}
+	}
 }
