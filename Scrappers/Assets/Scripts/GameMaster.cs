@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour {
 	public GameObject CamController;
 	public GameObject spawnPoint;
 	public GameObject pauseMenu;
-	public GameObject player;
+    public GameObject player;
 	public AudioClip spawnClip;
 	private AudioSource audioSource;
 
@@ -44,12 +44,18 @@ public class GameMaster : MonoBehaviour {
 		Transform spawnObj = Instantiate (spawnPrefab, spawnPosition, spawnRotation);
 		Destroy (spawnObj.gameObject, 3);
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
+        EnemySpawner.StartSpawningEnemies();
 
 	}
 	public static void KillPlayer (Player player){
 		Destroy (player.gameObject);
 		gm.SpawnPlayer (2);
 	}
+    public static void KillEnemy(Enemy enemy)
+    {
+        Destroy(enemy.gameObject);
+        EnemySpawner.RemoveEnemy();
+    }
 	public void PauseGame(){
 		pauseMenu.SetActive (true);
 		player.SetActive (false);

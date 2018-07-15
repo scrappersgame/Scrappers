@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour {
-	public float fireRate = 0;
-	public float Damage = 10;
+	public int fireRate = 0;
+	public int Damage = 10;
 	public float Range = 60;
 	public float EffectSpawnRate = 10;
 	public float volume = 0.5f;
@@ -38,15 +38,16 @@ public class Weapon : MonoBehaviour {
 			if (Input.GetButtonDown ("Fire1")) {
 				Shoot ();
 				audioSource.clip = gunShot;
-				AudioSource.PlayClipAtPoint(gunShot, transform.position, volume);
+                AudioSource.PlayClipAtPoint(gunShot, transform.position, volume);
 			} 
 		} else {
-			if (Input.GetButton("Fire1") && Time.time > timeToFire){
-				timeToFire = Time.time + 1/fireRate;
-				Shoot ();
-				audioSource.clip = gunShot;
-				audioSource.PlayOneShot(gunShot, volume);
-			} 
+            if (Input.GetButton("Fire1") && Time.time > timeToFire)
+            {
+                timeToFire = Time.time + (1f / fireRate);
+                Shoot();
+                audioSource.clip = gunShot;
+                AudioSource.PlayClipAtPoint(gunShot, transform.position, volume);
+            }
 		}
 	}
 
@@ -60,7 +61,12 @@ public class Weapon : MonoBehaviour {
 		}
 		Debug.DrawLine (firePointPosition, mousePosition , Color.cyan);
 		if (hit.collider != null){
+            Debug.Log("Hit " + hit.collider.name + ", damage " + Damage);
 			Debug.DrawLine (firePointPosition, hit.point, Color.red);
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if(enemy != null){
+                enemy.DamageEnemy(Damage);
+            }
 		}
 	}
 

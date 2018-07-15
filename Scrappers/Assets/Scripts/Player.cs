@@ -19,8 +19,10 @@ public class Player : MonoBehaviour {
 	void Update () {
 		if (transform.position.y <= KillZone.position.y){
 			DamagePlayer (playerStats.Health);
-		}
-	}
+        }else if(transform.position.y <-.5){
+            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
+        }
+    }
 	public void DamagePlayer (int damage) {
 		playerStats.Health -= damage;
 		if (playerStats.Health <= 0){

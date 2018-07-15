@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Tilemaps;
+using Pathfinding;
+using Pathfinding.Serialization;
+using Pathfinding.Util;
 
 public class PlaceTiles : MonoBehaviour {
 
 	public RuleTile TileToPlace;
-	public Tilemap theTileMap;
+    public Tilemap theTileMap;
+    private GridGraph gg;
 	public float placeDistance;
-	public int placeDepth;
+	public float placeDepth;
 	public bool isGrounded;
 
 	private Vector3Int previous;
@@ -15,22 +19,32 @@ public class PlaceTiles : MonoBehaviour {
 	private int groundLevel;
 	private Camera cam;
 
-	private void Awake(){
+    private float camHorizontalExtend;
+    private float camVerticalExtend;
+
+ 	private void Awake(){
+        
 		cam = Camera.main;
-		theTileMap = GameObject.FindGameObjectWithTag ("TileMap").GetComponent<Tilemap>();
-		currentCell = theTileMap.WorldToCell(transform.position);
+        camHorizontalExtend = cam.orthographicSize * Screen.width / Screen.height;
+        camVerticalExtend = cam.orthographicSize * Screen.height / Screen.width;
+        theTileMap = GameObject.FindGameObjectWithTag("TileMap").GetComponent<Tilemap>();
+        gg = AstarData.active.data.gridGraph;
+        currentCell = theTileMap.WorldToCell(transform.position);
 		groundLevel = currentCell.y - 1;
 		placeCell = new Vector3Int ( currentCell.x, groundLevel, currentCell.z);
 		theTileMap.SetTile (placeCell, TileToPlace);
 	}
+
+
 	// do late so that the player has a chance to move in update if necessary
 	private void LateUpdate()
 	{
+        placeDistance = camHorizontalExtend + 5;
+        placeDepth = camVerticalExtend + 5;
 		if (theTileMap == null) {
 			theTileMap = GameObject.FindGameObjectWithTag ("TileMap").GetComponent<Tilemap>();
 		}
-		float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;
-		placeDistance = camHorizontalExtend + 5;
+
 		// get current grid location
 		currentCell = theTileMap.WorldToCell(transform.position);
 		// add one in a direction (you'll have to change this to match your directional control)
@@ -69,5 +83,11 @@ public class PlaceTiles : MonoBehaviour {
 				}
 			}
 		}
-	}
+        int newY = 10;
+        if (transform.position.y > 10){
+            newY = Mathf.RoundToInt(transform.position.y);
+        }
+        gg.center = new Vector3(Mathf.RoundToInt(transform.position.x), newY, Mathf.RoundToInt(transform.position.z));
+        AstarPath.active.Scan();
+    }
 }

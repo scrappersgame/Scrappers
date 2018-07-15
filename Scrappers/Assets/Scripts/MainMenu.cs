@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour {
 	}
 	public void PlayGame (){
 		Vector3 followerp = follower.transform.position;
-		follower.GetComponent<ScrollRight>().enabled = false;
+        follower.GetComponent<IntroMovement>().enabled = false;
 		follower.transform.position = new Vector3 (followerp.x, 0, followerp.z);
 		gm.GetComponent<GameMaster>().spawnPoint = follower;
 		gm.GetComponent<GameMaster>().SpawnPlayer (0);
