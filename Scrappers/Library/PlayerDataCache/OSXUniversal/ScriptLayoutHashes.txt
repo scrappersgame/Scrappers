@@ -1,6 +1,6 @@
 OSXStandalone
 PlayerPath?
-/Users/jfrizze/Google Drive/Projects/RudeRodders/Game Ideas/Scrappers/Builds/Scappers v0.0.1.app
+/Users/jfrizze/Google Drive/Projects/RudeRodders/Current Projects/Scrappers/Builds/Build v0.0.1/Scappers MAC v0.0.1.app
 SceneListBegin?
 Assets/Scenes/Earth.unity
 SceneListEnd?
@@ -138,7 +138,7 @@ da21fc3f8056b1f91c3dd09c7bf4f90a UnityEngine.Networking.dll:UnityEngine.Networki
 fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 e7489514a648ce787e3e741d97e0f561 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.WaypointProgressTracker
-813f2b0367f70a6ffcfa935df75ae73d Assembly-CSharp.dll:.MoveTrail
+70240780dc3857000ef1fc651ad98119 Assembly-CSharp.dll:.MoveTrail
 be3587f28950c1c7508b3debe8d96b93 Assembly-CSharp-firstpass.dll:Cinemachine.CinemachineFreeLook
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.TMP_PhoneNumberValidator
@@ -210,6 +210,7 @@ b14b4630cc47b6e9ea8a644551a6a8cc TextMeshPro-2017.3-Runtime.dll:TMPro.TMP_Text
 67053dd85e9c9aa7b2eac0e5b916f295 Assembly-CSharp-firstpass.dll:UnityStandardAssets._2D.CameraFollow
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
 db74dedd8dcecd46301b925ae1192bca Assembly-CSharp-firstpass.dll:Cinemachine.CinemachineOrbitalTransposer
+52185e55de68089cea1f5d01f344fa86 Assembly-CSharp.dll:.Enemy
 58b80cf56079b9b2c86ad9aaede3dca8 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
 d947b95c171314b81b313a2f4ffd0411 Assembly-CSharp-firstpass.dll:UnityStandardAssets.CrossPlatformInput.ButtonHandler
 3bfb11e4225ff8f2f021f6ee52a3d7a6 Assembly-CSharp.dll:.GameMaster
@@ -349,7 +350,7 @@ dc24411ebfe03e601c72457a06015835 Assembly-CSharp.dll:.OptionsBack
 c460537368476eb54912e06b7e2afbb2 Assembly-CSharp.dll:Pathfinding.DynamicGridObstacle
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.VertexColorCycler
 b77ba20ff159d2da00a68503807ef22f Assembly-CSharp.dll:Pathfinding.AnimationLink
-89b42ed827143312b8dea54461a4345b Assembly-CSharp.dll:.Weapon
+b7dfcd33aafe8440a0f3f0f635906ab2 Assembly-CSharp.dll:.Weapon
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.TileGeneration
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.FPSCounter
 8042e295c75ee94d410067fe27b0be4c Assembly-CSharp.dll:Pathfinding.Patrol
@@ -365,4 +366,3 @@ b77ba20ff159d2da00a68503807ef22f Assembly-CSharp.dll:Pathfinding.AnimationLink
 835999720c64ca72971bdcd599094aa9 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.SimpleScript
 695c9335429d4798b6f74ca73c042ff4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Utility.AutoMobileShaderSwitch
-52185e55de68089cea1f5d01f344fa86 Assembly-CSharp.dll:.Enemy

@@ -389,6 +389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 10
   Damage: 10
+  Force: 50
   Range: 20
   EffectSpawnRate: 10
   volume: 0.5
@@ -397,9 +398,10 @@ MonoBehaviour:
     m_Bits: 4294966523
   BulletTrailPrefab: {fileID: 4934359368815866, guid: 384987fde43474c7f9755e672894039c,
     type: 2}
+  HitPrefab: {fileID: 4198187676200926, guid: 7ea9985eccf4b4da489c6c409ce6ada9, type: 2}
   MuzzleFlashPrefab: {fileID: 4494174220518532, guid: b9b6d3a0954ed4fbaa8903fc325b1d8a,
     type: 2}
-  TrailColor: {r: 0.30060554, g: 0.69367325, b: 1, a: 1}
+  TrailColor: {r: 1, g: 0.39215687, b: 0, a: 1}
   gunShot: {fileID: 8300000, guid: 20f73241b4d2943c58b618d87183d19b, type: 3}
 --- !u!212 &212049606882499784
 SpriteRenderer:
