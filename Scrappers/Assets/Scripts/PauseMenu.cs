@@ -10,7 +10,7 @@ public class PauseMenu : MonoBehaviour {
 		Application.Quit();
 	}
 	public void ResumeGame (){
-		player.SetActive (true);
+        Time.timeScale = 1;
 		this.gameObject.SetActive (false);
 	}
 

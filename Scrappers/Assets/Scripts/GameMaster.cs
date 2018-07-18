@@ -58,6 +58,6 @@ public class GameMaster : MonoBehaviour {
     }
 	public void PauseGame(){
 		pauseMenu.SetActive (true);
-		player.SetActive (false);
+        Time.timeScale = 0;
 	}
 }

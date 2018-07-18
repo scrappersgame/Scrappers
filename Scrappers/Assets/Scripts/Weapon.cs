@@ -8,7 +8,8 @@ public class Weapon : MonoBehaviour {
     public float Force = 5f;
 	public float Range = 15;
 	public float EffectSpawnRate = 10;
-	public float volume = 0.5f;
+    public float EffectVolume = 0.5f;
+    public float FlareSize= 0.4f;
 	public LayerMask Targets;
     public Transform BulletTrailPrefab;
     public Transform HitPrefab;
@@ -40,7 +41,7 @@ public class Weapon : MonoBehaviour {
 			if (Input.GetButtonDown ("Fire1")) {
 				Shoot ();
 				audioSource.clip = gunShot;
-                AudioSource.PlayClipAtPoint(gunShot, transform.position, volume);
+                AudioSource.PlayClipAtPoint(gunShot, transform.position, EffectVolume);
 			} 
 		} else {
             if (Input.GetButton("Fire1") && Time.time > timeToFire)
@@ -48,7 +49,7 @@ public class Weapon : MonoBehaviour {
                 timeToFire = Time.time + (1f / fireRate);
                 Shoot();
                 audioSource.clip = gunShot;
-                AudioSource.PlayClipAtPoint(gunShot, transform.position, volume);
+                AudioSource.PlayClipAtPoint(gunShot, transform.position, EffectVolume);
             }
 		}
 	}
@@ -112,7 +113,7 @@ public class Weapon : MonoBehaviour {
         Transform muzzle = Instantiate (MuzzleFlashPrefab, firePointPosition, firePoint.rotation) as Transform;
         muzzle.parent = firePoint;
         muzzle.GetComponent<SpriteRenderer> ().color = TrailColor;
-		float size = Random.Range (0.6f, 0.9f);
+        float size = Random.Range (FlareSize - 0.1f, FlareSize + 0.1f);
         muzzle.localScale = new Vector3 (size, size, size);
         Destroy (muzzle.gameObject, 0.02f);
 	}
