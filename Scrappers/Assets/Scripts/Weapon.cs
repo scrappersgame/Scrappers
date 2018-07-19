@@ -9,7 +9,9 @@ public class Weapon : MonoBehaviour {
 	public float Range = 15;
 	public float EffectSpawnRate = 10;
     public float EffectVolume = 0.5f;
-    public float FlareSize= 0.4f;
+    public float FlareSize = 0.4f;
+    public float CamShakeAmount = 0.1f;
+    public float CamShakeLength = 0.1f;
 	public LayerMask Targets;
     public Transform BulletTrailPrefab;
     public Transform HitPrefab;
@@ -19,6 +21,8 @@ public class Weapon : MonoBehaviour {
 	private AudioSource audioSource;
 	private Vector2 firePointPosition;
 	private Gradient gradient;
+
+    CameraShake camShake;
 
 	float timeToSpawnEffect = 0;
 	float timeToFire = 0;
@@ -35,8 +39,15 @@ public class Weapon : MonoBehaviour {
 
 	}
 
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+        camShake = GameMaster.gm.GetComponent<CameraShake>();
+        if(camShake == null)
+            Debug.LogError("No camera shake script on GM object.");
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (Time.timeScale > 0){
             if (fireRate == 0)
             {
@@ -91,33 +102,43 @@ public class Weapon : MonoBehaviour {
             hit.collider.transform.GetComponent<Rigidbody2D>().AddForce(hit.normal * -Force);
             Enemy enemy = hit.collider.GetComponent<Enemy>();
             if(enemy != null){
-                enemy.DamageEnemy(Damage);
+                enemy.DamageEnemy(Damage); //Damage enemy
+                //create sound at hitpoint
                 AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, 1f);
             }
 		}
 	}
 
     void Effect (Vector2 hitPoint, int RotationOffset, Vector3 hitNormal){
+        //setting bullet colors
         gradient.SetKeys(
             new GradientColorKey[] { new GradientColorKey(TrailColor, 0.0f), new GradientColorKey(TrailColor, 1.0f) },
             new GradientAlphaKey[] { new GradientAlphaKey(1, 0.0f), new GradientAlphaKey(0, 1.0f) }
         );
         if (hitNormal != new Vector3(999,999,999)){
+            
+            //create hit particles
             Transform hit = Instantiate(HitPrefab, hitPoint, Quaternion.FromToRotation(Vector3.right, hitNormal));
             ParticleSystem.ColorOverLifetimeModule settings = hit.GetComponent<ParticleSystem>().colorOverLifetime;
             settings.color = gradient;
             Destroy(hit.gameObject, 0.5f);
         }
 
+        //create bullet trail
 		Transform trail = Instantiate (BulletTrailPrefab, firePointPosition, firePoint.rotation) as Transform;
         trail.Rotate (Vector3.forward * RotationOffset);
         trail.GetComponent<TrailRenderer> ().colorGradient = gradient;
         trail.GetComponent<MoveTrail>().endPoint = hitPoint;
+
+        //create muzzle flash
         Transform muzzle = Instantiate (MuzzleFlashPrefab, firePointPosition, firePoint.rotation) as Transform;
         muzzle.parent = firePoint;
         muzzle.GetComponent<SpriteRenderer> ().color = TrailColor;
         float size = Random.Range (FlareSize - 0.1f, FlareSize + 0.1f);
         muzzle.localScale = new Vector3 (size, size, size);
         Destroy (muzzle.gameObject, 0.02f);
+
+        //shake camera
+        camShake.Shake(CamShakeAmount, CamShakeLength);
 	}
 }

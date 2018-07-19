@@ -2923,6 +2923,7 @@ GameObject:
   - component: {fileID: 824939780}
   - component: {fileID: 824939781}
   - component: {fileID: 824939782}
+  - component: {fileID: 824939783}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: GM
@@ -3021,6 +3022,18 @@ MonoBehaviour:
   spawnDistance: 20
   enemiesSpawned: 0
   spawning: 1
+--- !u!114 &824939783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 824939776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623ac042161564743b4897c5b55f5ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
 --- !u!1 &949135065
 GameObject:
   m_ObjectHideFlags: 0

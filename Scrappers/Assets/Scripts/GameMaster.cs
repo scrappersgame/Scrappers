@@ -13,8 +13,6 @@ public class GameMaster : MonoBehaviour {
 
 	void Awake (){
 		audioSource = GameObject.FindGameObjectWithTag ("Sounds").GetComponent<AudioSource>();
-	}
-	void Start (){
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}

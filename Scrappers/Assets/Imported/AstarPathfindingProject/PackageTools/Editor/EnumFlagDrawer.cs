@@ -7,14 +7,14 @@ namespace Pathfinding {
 	[CustomPropertyDrawer(typeof(EnumFlagAttribute))]
 	public class EnumFlagDrawer : PropertyDrawer {
 		public override void OnGUI (Rect position, SerializedProperty property, GUIContent label) {
-			Enum targetEnum = GetBaseProperty<Enum>(property);
+			//Enum targetEnum = GetBaseProperty<Enum>(property);
 
 			EditorGUI.BeginProperty(position, label, property);
 			EditorGUI.BeginChangeCheck();
-			Enum enumNew = EditorGUI.EnumMaskField(position, label, targetEnum);
-			if (EditorGUI.EndChangeCheck() || !property.hasMultipleDifferentValues) {
-				property.intValue = (int)Convert.ChangeType(enumNew, targetEnum.GetType());
-			}
+			//Enum enumNew = EditorGUI.EnumMaskField(position, label, targetEnum);
+			//if (EditorGUI.EndChangeCheck() || !property.hasMultipleDifferentValues) {
+			//	property.intValue = (int)Convert.ChangeType(enumNew, targetEnum.GetType());
+			//}
 			EditorGUI.EndProperty();
 		}
 
