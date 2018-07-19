@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     private Transform KillZone;
-    public static bool playerPaused = true;
+    public AudioClip hitSound;
+    public bool playerPaused = true;
 
     [System.Serializable]
     public class EnemyStats

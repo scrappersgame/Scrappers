@@ -407,6 +407,7 @@ MonoBehaviour:
     type: 2}
   TrailColor: {r: 1, g: 0.39215687, b: 0, a: 1}
   gunShot: {fileID: 8300000, guid: 20f73241b4d2943c58b618d87183d19b, type: 3}
+  hitSound: {fileID: 8300000, guid: d02e4df211ed74a0084ea098d8e22529, type: 3}
 --- !u!114 &114726620690486142
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea066e861f4d24ddcbbebea4fe5e271b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitSound: {fileID: 8300000, guid: d02e4df211ed74a0084ea098d8e22529, type: 3}
+  playerPaused: 1
   stats:
     Health: 100
 --- !u!114 &114969839772823240
