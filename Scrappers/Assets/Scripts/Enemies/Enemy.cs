@@ -59,4 +59,11 @@ public class Enemy : MonoBehaviour {
             statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        Player _player = collision.collider.GetComponent<Player>();
+        if (_player != null){
+            _player.DamagePlayer(1);
+        }
+    }
 }

@@ -7,6 +7,9 @@ public class StatusIndicator : MonoBehaviour {
     private RectTransform healthbarRect;
     [SerializeField]
     private Text healthbarText;
+    [SerializeField]
+    private Gradient healthGradient;
+
     private bool facingRight = true;
 
     void Start () {
@@ -20,6 +23,7 @@ public class StatusIndicator : MonoBehaviour {
 	
     public void SetHealth(int _cur, int _max){
         float _value = (float)_cur / _max;
+        healthbarRect.GetComponent<Image>().color = healthGradient.Evaluate(_value);
         healthbarRect.localScale = new Vector3(_value, healthbarRect.localScale.y, healthbarRect.localScale.z);
         healthbarText.text = _cur + "/" + _max + " HP";
     }

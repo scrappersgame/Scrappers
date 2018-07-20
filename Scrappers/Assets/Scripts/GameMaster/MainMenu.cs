@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour {
 
-	public GameObject gm;
 	public GameObject follower;
 	public GameObject title;
 
@@ -15,10 +14,20 @@ public class MainMenu : MonoBehaviour {
 		Vector3 followerp = follower.transform.position;
         follower.GetComponent<IntroMovement>().enabled = false;
 		follower.transform.position = new Vector3 (followerp.x, 0, followerp.z);
-		gm.GetComponent<GameMaster>().spawnPoint = follower;
-		gm.GetComponent<GameMaster>().SpawnPlayer (0);
-		this.gameObject.SetActive (false);
+        GameMaster.gm.spawnPoint = follower;
+        GameMaster.gm.SpawnPlayer (0);
+        GameMaster.gm.paused = false;
+        this.gameObject.SetActive (false);
 		title.SetActive (false);
 	}
+    private void Update()
+    {
+        bool pauseButton = Input.GetKey(KeyCode.Escape);
+        if (pauseButton)
+        {
+            pauseButton = false;
+            QuitGame();
+        }
+    }
 		
 }

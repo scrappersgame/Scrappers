@@ -6,10 +6,12 @@ public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
 	public GameObject CamController;
 	public GameObject spawnPoint;
-	public GameObject pauseMenu;
+    public GameObject pauseMenu;
+    public GameObject pauseBG;
     public GameObject player;
 	public AudioClip spawnClip;
-	private AudioSource audioSource;
+    private AudioSource audioSource;
+    public bool paused = true;
 
 	void Awake (){
 		audioSource = GameObject.FindGameObjectWithTag ("Sounds").GetComponent<AudioSource>();
@@ -18,11 +20,20 @@ public class GameMaster : MonoBehaviour {
 		}
 	}
 	void LateUpdate(){
-		bool pause = Input.GetKey (KeyCode.Escape);
-		if (pause && player != null && player.activeSelf == true) {
+        bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
+        if (pauseButton && !paused) {
+            Debug.Log("pausing");
+            pauseButton = false;
+            paused = true;
 			PauseGame();
-		}
-        pause = false;
+        }
+        int playerCount = GameObject.FindGameObjectsWithTag("Player").Length;
+        if (playerCount >1){
+            for (int i = 1; i < playerCount; i++){
+                Destroy(GameObject.FindGameObjectsWithTag("Player")[i]);
+            }
+        }
+
 	}
 	public Transform playerPrefab;
 	public Transform spawnPrefab;
@@ -54,8 +65,21 @@ public class GameMaster : MonoBehaviour {
         Destroy(enemy.gameObject);
         EnemySpawner.RemoveEnemy();
     }
-	public void PauseGame(){
-		pauseMenu.SetActive (true);
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+        pauseBG.SetActive(true);
         Time.timeScale = 0;
-	}
+    }
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+        pauseBG.SetActive(false);
+        Time.timeScale = 1;
+        StartCoroutine(Unpause(.01f));
+    }
+    IEnumerator Unpause(float delay){
+        yield return delay;
+        paused = false;
+    }
 }

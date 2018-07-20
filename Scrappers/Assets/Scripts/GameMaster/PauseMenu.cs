@@ -9,9 +9,14 @@ public class PauseMenu : MonoBehaviour {
 	public void QuitGame (){
 		Application.Quit();
 	}
-	public void ResumeGame (){
-        Time.timeScale = 1;
-		this.gameObject.SetActive (false);
-	}
-
+    private void Update()
+    {
+        bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
+        if (pauseButton)
+        {
+            Debug.Log("unpausing");
+            pauseButton = false;
+            GameMaster.gm.ResumeGame();
+        }
+    }
 }
