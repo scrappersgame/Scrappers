@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraShake.cs" />
     <Compile Include="Assets\Imported\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs" />
     <Compile Include="Assets\Imported\AstarPathfindingProject\Behaviors\Patrol.cs" />
     <Compile Include="Assets\Imported\AstarPathfindingProject\changelog.cs" />
@@ -176,28 +175,27 @@
     <Compile Include="Assets\Imported\Parallax Desert Background\Scripts\CameraController.cs" />
     <Compile Include="Assets\Imported\Parallax Desert Background\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Imported\Parallax Desert Background\Scripts\ScrollingBackground.cs" />
-    <Compile Include="Assets\Scripts\ArmRotation.cs" />
-    <Compile Include="Assets\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Scripts\DestroyTiles.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\EnemyAI.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Fading.cs" />
-    <Compile Include="Assets\Scripts\GameMaster.cs" />
-    <Compile Include="Assets\Scripts\IntroMovement.cs" />
-    <Compile Include="Assets\Scripts\LetterSpacing.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\MoveTrail.cs" />
-    <Compile Include="Assets\Scripts\OptionsBack.cs" />
-    <Compile Include="Assets\Scripts\Parallaxing.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\PlaceTiles.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\SceneController.cs" />
-    <Compile Include="Assets\Scripts\TileGeneration.cs" />
-    <Compile Include="Assets\Scripts\Tiling.cs" />
-    <Compile Include="Assets\Scripts\Twinkle.cs" />
-    <Compile Include="Assets\Scripts\Weapon.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraShake.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyAI.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\Enemies\StatusIndicator.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\Fading.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\GameMaster.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\OptionsBack.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\Parallaxing.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\GameMaster\SceneController.cs" />
+    <Compile Include="Assets\Scripts\Misc\IntroMovement.cs" />
+    <Compile Include="Assets\Scripts\Misc\Tiling.cs" />
+    <Compile Include="Assets\Scripts\Misc\Twinkle.cs" />
+    <Compile Include="Assets\Scripts\Player\ArmRotation.cs" />
+    <Compile Include="Assets\Scripts\Player\PlaceTiles.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Weapons\MoveTrail.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

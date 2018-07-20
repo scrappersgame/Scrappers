@@ -103,13 +103,13 @@ public class EnemyAI : MonoBehaviour {
         float targetInd = target.position.x - transform.position.x;
         if (targetInd > 0 && !facingRight)
         {
-            // ... flip the player.
+            // ... flip the enemy.
             Flip();
         }
-        // Otherwise if the input is moving the player left and the player is facing right...
+        // Otherwise if the input is moving the enemy left and the enemy is facing right...
         else if (targetInd < 0 && facingRight)
         {
-            // ... flip the player.
+            // ... flip the enemy.
             Flip();
         }
         if (path == null)
@@ -140,10 +140,10 @@ public class EnemyAI : MonoBehaviour {
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
+        // Switch the way the enemy is labelled as facing.
         facingRight = !facingRight;
 
-        // Multiply the player's x local scale by -1.
+        // Multiply the enemy's x local scale by -1.
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
