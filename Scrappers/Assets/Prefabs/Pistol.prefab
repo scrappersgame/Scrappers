@@ -86,7 +86,10 @@ MonoBehaviour:
   Force: 50
   Range: 20
   EffectSpawnRate: 10
-  volume: 0.5
+  EffectVolume: 0.4
+  FlareSize: 0.4
+  CamShakeAmount: 0.1
+  CamShakeLength: 0.1
   Targets:
     serializedVersion: 2
     m_Bits: 4294966523

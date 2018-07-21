@@ -14,7 +14,6 @@ public class PauseMenu : MonoBehaviour {
         bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
         if (pauseButton)
         {
-            Debug.Log("unpausing");
             pauseButton = false;
             GameMaster.gm.ResumeGame();
         }

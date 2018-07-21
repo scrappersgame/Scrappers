@@ -22,7 +22,6 @@ public class GameMaster : MonoBehaviour {
 	void LateUpdate(){
         bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
         if (pauseButton && !paused) {
-            Debug.Log("pausing");
             pauseButton = false;
             paused = true;
 			PauseGame();
@@ -32,6 +31,7 @@ public class GameMaster : MonoBehaviour {
             for (int i = 1; i < playerCount; i++){
                 Destroy(GameObject.FindGameObjectsWithTag("Player")[i]);
             }
+            CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = GameObject.FindGameObjectsWithTag("Player")[0].transform;
         }
 
 	}

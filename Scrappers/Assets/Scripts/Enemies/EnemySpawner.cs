@@ -46,8 +46,8 @@ public class EnemySpawner : MonoBehaviour {
         yield return new WaitForSeconds(1f / spawner.spawnRate);
         if (spawner.enemiesSpawned<spawner.maxSpawn)
         {
-            spawner.StartCoroutine(SpawnEnemies());
             spawner.enemiesSpawned++;
+            spawner.StartCoroutine(SpawnEnemies());
         }else{
             spawner.spawning = false;
         }

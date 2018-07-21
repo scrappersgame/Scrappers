@@ -284,10 +284,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSound: {fileID: 8300000, guid: d02e4df211ed74a0084ea098d8e22529, type: 3}
-  playerPaused: 1
+  destroySound: {fileID: 8300000, guid: 99a7644bcd38e47b49818763ea77d527, type: 3}
+  destroyParticals: {fileID: 4909357233208428, guid: d092012ff86464a0ebe981a752887e80,
+    type: 2}
   statusIndicator: {fileID: 114364003889118104}
   stats:
     maxHealth: 100
+    damageAmount: 1
+    continuousDMG: 1
 --- !u!114 &114631352215147322
 MonoBehaviour:
   m_ObjectHideFlags: 1

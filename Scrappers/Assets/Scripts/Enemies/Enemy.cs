@@ -5,13 +5,17 @@ using UnityEngine;
 public class Enemy : MonoBehaviour {
 
     private Transform KillZone;
+    private bool shuttingDown = false;
     public AudioClip hitSound;
-    public bool playerPaused = true;
+    public AudioClip destroySound;
+    public Transform destroyParticals;
 
     [System.Serializable]
     public class EnemyStats
     {
         public int maxHealth = 100;
+        public int damageAmount = 1;
+        public bool continuousDMG = true;
         private int _curHealth;
         public int currentHealth
         {
@@ -59,11 +63,45 @@ public class Enemy : MonoBehaviour {
             statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!stats.continuousDMG)
+        {
+            Player _player = collision.collider.GetComponent<Player>();
+            if (_player != null)
+            {
+                _player.DamagePlayer(stats.damageAmount);
+            }
+        }
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        Player _player = collision.collider.GetComponent<Player>();
-        if (_player != null){
-            _player.DamagePlayer(1);
+        if (stats.continuousDMG)
+        {
+            Player _player = collision.collider.GetComponent<Player>();
+            if (_player != null)
+            {
+                _player.DamagePlayer(stats.damageAmount);
+            }
+        }
+    }
+    private void OnApplicationQuit()
+    {
+        shuttingDown = true;
+    }
+    private void OnDestroy()
+    {
+        if (!shuttingDown)
+        {
+            if (destroyParticals != null)
+            {
+                Transform particles = Instantiate(destroyParticals, transform.position, transform.rotation);
+                Destroy(particles.gameObject, 2f);
+            }
+            if (destroySound != null)
+            {
+                AudioSource.PlayClipAtPoint(destroySound, transform.position, 1f);
+            }
         }
     }
 }

@@ -22,15 +22,15 @@ public class PlaceTiles : MonoBehaviour {
     private float camHorizontalExtend;
     private float camVerticalExtend;
 
- 	private void Awake(){
+ 	private void Start(){
         
 		cam = Camera.main;
         camHorizontalExtend = cam.orthographicSize * Screen.width / Screen.height;
         camVerticalExtend = cam.orthographicSize * Screen.height / Screen.width;
         theTileMap = GameObject.FindGameObjectWithTag("TileMap").GetComponent<Tilemap>();
         gg = AstarData.active.data.gridGraph;
-        currentCell = theTileMap.WorldToCell(transform.position);
-		groundLevel = currentCell.y - 1;
+        currentCell = theTileMap.WorldToCell(cam.transform.position);
+		groundLevel = -1;
 		placeCell = new Vector3Int ( currentCell.x, groundLevel, currentCell.z);
 		theTileMap.SetTile (placeCell, TileToPlace);
 	}
@@ -46,7 +46,7 @@ public class PlaceTiles : MonoBehaviour {
 		}
 
 		// get current grid location
-		currentCell = theTileMap.WorldToCell(transform.position);
+		currentCell = theTileMap.WorldToCell(cam.transform.position);
 		// add one in a direction (you'll have to change this to match your directional control)
 		currentCell.x += 1;
 
@@ -83,11 +83,7 @@ public class PlaceTiles : MonoBehaviour {
 				}
 			}
 		}
-        int newY = 10;
-        if (transform.position.y > 10){
-            newY = Mathf.RoundToInt(transform.position.y);
-        }
-        gg.center = new Vector3(Mathf.RoundToInt(transform.position.x), newY, Mathf.RoundToInt(transform.position.z));
-        AstarPath.active.Scan();
+        gg.center = new Vector3(Mathf.RoundToInt(cam.transform.position.x), Mathf.RoundToInt(cam.transform.position.y), Mathf.RoundToInt(cam.transform.position.z));
+        gg.Scan();
     }
 }
