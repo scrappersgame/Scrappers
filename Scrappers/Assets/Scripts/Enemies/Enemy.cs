@@ -14,8 +14,6 @@ public class Enemy : MonoBehaviour {
     public class EnemyStats
     {
         public int maxHealth = 100;
-        public int damageAmount = 1;
-        public bool continuousDMG = true;
         private int _curHealth;
         public int currentHealth
         {
@@ -61,28 +59,6 @@ public class Enemy : MonoBehaviour {
         if (statusIndicator != null)
         {
             statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
-        }
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!stats.continuousDMG)
-        {
-            Player _player = collision.collider.GetComponent<Player>();
-            if (_player != null)
-            {
-                _player.DamagePlayer(stats.damageAmount);
-            }
-        }
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (stats.continuousDMG)
-        {
-            Player _player = collision.collider.GetComponent<Player>();
-            if (_player != null)
-            {
-                _player.DamagePlayer(stats.damageAmount);
-            }
         }
     }
     private void OnApplicationQuit()

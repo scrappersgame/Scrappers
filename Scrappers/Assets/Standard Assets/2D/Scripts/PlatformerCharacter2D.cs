@@ -23,7 +23,7 @@ namespace UnityStandardAssets._2D
         private float mouseIndicator;
 
         public int MaxJumps = 1;
-        private int JumpCount = 1;
+        private int JumpCount = 0;
 
         private void Awake()
         {

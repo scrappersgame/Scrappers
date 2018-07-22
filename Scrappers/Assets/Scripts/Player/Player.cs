@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
-	private Transform KillZone;
-	public static bool playerPaused = true;
+
 
 	[System.Serializable]
 	public class PlayerStats {
@@ -24,12 +23,14 @@ public class Player : MonoBehaviour {
 	}
     public PlayerStats stats = new PlayerStats();
 
-    [Header("Optional")]
-    [SerializeField]
     private StatusIndicator statusIndicator;
+    private Transform KillZone;
+    private Transform gunHand;
+    private GameObject currentGun;
 
 	void Awake (){
 		KillZone = GameObject.FindGameObjectWithTag ("KZ").transform;
+        statusIndicator = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<StatusIndicator>();
 	}
     private void Start()
     {
@@ -56,4 +57,15 @@ public class Player : MonoBehaviour {
             statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
         }
 	}
+    public void SwitchGuns (GameObject _gunPrefab){
+        if (gunHand == null)
+            gunHand = GameObject.FindGameObjectWithTag("GunHand").transform;
+        if (currentGun != null)
+            Destroy(currentGun);
+        GameObject _newGun = Instantiate(_gunPrefab, gunHand.position, gunHand.rotation);
+        _newGun.transform.SetParent(gunHand.parent);
+        _newGun.transform.localScale = _newGun.transform.parent.localScale;
+        currentGun = _newGun;
+        
+    }
 }

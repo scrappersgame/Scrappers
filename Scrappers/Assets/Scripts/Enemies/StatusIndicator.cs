@@ -9,6 +9,8 @@ public class StatusIndicator : MonoBehaviour {
     private Text healthbarText;
     [SerializeField]
     private Gradient healthGradient;
+    [SerializeField]
+    private bool barResizes;
 
     private bool facingRight = true;
 
@@ -24,21 +26,26 @@ public class StatusIndicator : MonoBehaviour {
     public void SetHealth(int _cur, int _max){
         float _value = (float)_cur / _max;
         healthbarRect.GetComponent<Image>().color = healthGradient.Evaluate(_value);
-        healthbarRect.localScale = new Vector3(_value, healthbarRect.localScale.y, healthbarRect.localScale.z);
+        if(barResizes)
+            healthbarRect.localScale = new Vector3(_value, healthbarRect.localScale.y, healthbarRect.localScale.z);
+
         healthbarText.text = _cur + "/" + _max + " HP";
     }
     private void Update()
     {
-        if (transform.parent.localScale.x > 0 && !facingRight)
+        if (barResizes)
         {
-            // ... flip the enemy.
-            Flip();
-        }
-        // Otherwise if the input is moving the enemy left and the enemy is facing right...
-        else if (transform.parent.localScale.x < 0 && facingRight)
-        {
-            // ... flip the enemy.
-            Flip();
+            if (transform.parent.localScale.x > 0 && !facingRight)
+            {
+                // ... flip the enemy.
+                Flip();
+            }
+            // Otherwise if the input is moving the enemy left and the enemy is facing right...
+            else if (transform.parent.localScale.x < 0 && facingRight)
+            {
+                // ... flip the enemy.
+                Flip();
+            }
         }
     }
     private void Flip()

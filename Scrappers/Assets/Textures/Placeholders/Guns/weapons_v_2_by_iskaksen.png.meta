@@ -1,0 +1,2199 @@
+fileFormatVersion: 2
+guid: 99ede9537d64e44979d38e34f23506d4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: weapons_v_2_by_iskaksen_0
+    21300002: weapons_v_2_by_iskaksen_1
+    21300004: weapons_v_2_by_iskaksen_2
+    21300006: weapons_v_2_by_iskaksen_3
+    21300008: weapons_v_2_by_iskaksen_4
+    21300010: weapons_v_2_by_iskaksen_5
+    21300012: weapons_v_2_by_iskaksen_6
+    21300014: weapons_v_2_by_iskaksen_7
+    21300016: weapons_v_2_by_iskaksen_8
+    21300018: weapons_v_2_by_iskaksen_9
+    21300020: weapons_v_2_by_iskaksen_10
+    21300022: weapons_v_2_by_iskaksen_11
+    21300024: weapons_v_2_by_iskaksen_12
+    21300026: weapons_v_2_by_iskaksen_13
+    21300028: weapons_v_2_by_iskaksen_14
+    21300030: weapons_v_2_by_iskaksen_15
+    21300032: weapons_v_2_by_iskaksen_16
+    21300034: weapons_v_2_by_iskaksen_17
+    21300036: weapons_v_2_by_iskaksen_18
+    21300038: weapons_v_2_by_iskaksen_19
+    21300040: weapons_v_2_by_iskaksen_20
+    21300042: weapons_v_2_by_iskaksen_21
+    21300044: weapons_v_2_by_iskaksen_22
+    21300046: weapons_v_2_by_iskaksen_23
+    21300048: weapons_v_2_by_iskaksen_24
+    21300050: weapons_v_2_by_iskaksen_25
+    21300052: weapons_v_2_by_iskaksen_26
+    21300054: weapons_v_2_by_iskaksen_27
+    21300056: weapons_v_2_by_iskaksen_28
+    21300058: weapons_v_2_by_iskaksen_29
+    21300060: weapons_v_2_by_iskaksen_30
+    21300062: weapons_v_2_by_iskaksen_31
+    21300064: weapons_v_2_by_iskaksen_32
+    21300066: weapons_v_2_by_iskaksen_33
+    21300068: weapons_v_2_by_iskaksen_34
+    21300070: weapons_v_2_by_iskaksen_35
+    21300072: weapons_v_2_by_iskaksen_36
+    21300074: weapons_v_2_by_iskaksen_37
+    21300076: weapons_v_2_by_iskaksen_38
+    21300078: weapons_v_2_by_iskaksen_39
+    21300080: weapons_v_2_by_iskaksen_40
+    21300082: weapons_v_2_by_iskaksen_41
+    21300084: weapons_v_2_by_iskaksen_42
+    21300086: weapons_v_2_by_iskaksen_43
+    21300088: weapons_v_2_by_iskaksen_44
+    21300090: weapons_v_2_by_iskaksen_45
+    21300092: weapons_v_2_by_iskaksen_46
+    21300094: weapons_v_2_by_iskaksen_47
+    21300096: weapons_v_2_by_iskaksen_48
+    21300098: weapons_v_2_by_iskaksen_49
+    21300100: weapons_v_2_by_iskaksen_50
+    21300102: weapons_v_2_by_iskaksen_51
+    21300104: weapons_v_2_by_iskaksen_52
+    21300106: weapons_v_2_by_iskaksen_53
+    21300108: weapons_v_2_by_iskaksen_54
+    21300110: weapons_v_2_by_iskaksen_55
+    21300112: weapons_v_2_by_iskaksen_56
+    21300114: weapons_v_2_by_iskaksen_57
+    21300116: weapons_v_2_by_iskaksen_58
+    21300118: weapons_v_2_by_iskaksen_59
+    21300120: weapons_v_2_by_iskaksen_60
+    21300122: weapons_v_2_by_iskaksen_61
+    21300124: weapons_v_2_by_iskaksen_62
+    21300126: weapons_v_2_by_iskaksen_63
+    21300128: weapons_v_2_by_iskaksen_64
+    21300130: weapons_v_2_by_iskaksen_65
+    21300132: weapons_v_2_by_iskaksen_66
+    21300134: weapons_v_2_by_iskaksen_67
+    21300136: weapons_v_2_by_iskaksen_68
+    21300138: weapons_v_2_by_iskaksen_69
+    21300140: weapons_v_2_by_iskaksen_70
+    21300142: weapons_v_2_by_iskaksen_71
+    21300144: weapons_v_2_by_iskaksen_72
+    21300146: weapons_v_2_by_iskaksen_73
+    21300148: weapons_v_2_by_iskaksen_74
+    21300150: weapons_v_2_by_iskaksen_75
+    21300152: weapons_v_2_by_iskaksen_76
+    21300154: weapons_v_2_by_iskaksen_77
+    21300156: weapons_v_2_by_iskaksen_78
+    21300158: weapons_v_2_by_iskaksen_79
+    21300160: weapons_v_2_by_iskaksen_80
+    21300162: weapons_v_2_by_iskaksen_81
+    21300164: weapons_v_2_by_iskaksen_82
+    21300166: weapons_v_2_by_iskaksen_83
+    21300168: weapons_v_2_by_iskaksen_84
+    21300170: weapons_v_2_by_iskaksen_85
+    21300172: weapons_v_2_by_iskaksen_86
+    21300174: weapons_v_2_by_iskaksen_87
+    21300176: weapons_v_2_by_iskaksen_88
+    21300178: weapons_v_2_by_iskaksen_89
+    21300180: weapons_v_2_by_iskaksen_90
+    21300182: weapons_v_2_by_iskaksen_91
+    21300184: weapons_v_2_by_iskaksen_92
+    21300186: weapons_v_2_by_iskaksen_93
+    21300188: weapons_v_2_by_iskaksen_94
+    21300190: weapons_v_2_by_iskaksen_95
+    21300192: weapons_v_2_by_iskaksen_96
+    21300194: weapons_v_2_by_iskaksen_97
+  externalObjects: {}
+  serializedVersion: 6
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 55
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_0
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 549
+        width: 112
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 375114032182640f0b4b2092c9a26371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_1
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 557
+        width: 73
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec5bb516e87a41b79f6e22cbd2c137b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_2
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 554
+        width: 94
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed5958babaef460a967c1a4028c4cb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_3
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 557
+        width: 103
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3850b6f56c0541d7bf58906ce02124f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_4
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 533
+        width: 45
+        height: 24
+      alignment: 9
+      pivot: {x: 0.16802199, y: 0.3571396}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86fd509d0227450798ea17637b8a753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_5
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 515
+        width: 80
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6749986d920492a98accfdf1cdab43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_6
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 508
+        width: 70
+        height: 32
+      alignment: 9
+      pivot: {x: 0.56975883, y: 0.25414658}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922c93c659ce74f45b7334e7b4a083b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_7
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 509
+        width: 107
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c4efa682def443bbf0537b652e565e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 497
+        width: 31
+        height: 30
+      alignment: 9
+      pivot: {x: 0.23929769, y: 0.5489807}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94412b871b1f4516a2a5c6adb907e2c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_9
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 496
+        width: 152
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed3a96588a9440658e7b7b17d713b38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_10
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 466
+        width: 92
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0f086afb214c4e8a08e2eb95610f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_11
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 463
+        width: 106
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e5e55e7721244a18a48904e792b103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_12
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 464
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b900d484d9842b69e4de78eb67562b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_13
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 453
+        width: 102
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c177c31a8ed6a4a6f84f9df6308ccd10
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_14
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 466
+        width: 75
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f489d54fa9f874af895797cc6055a4c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_15
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 427
+        width: 31
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f826e3fde27a4f3aa8da9a3af236692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_16
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 408
+        width: 78
+        height: 33
+      alignment: 9
+      pivot: {x: 0.35757056, y: 0.2980097}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14c425c20c7e40f5827e97c7ef5f9ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_17
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 408
+        width: 113
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cd839dcba794ea19f567aac42173ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_18
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 411
+        width: 130
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bf747e9a07747ceb77f910c3898f02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 396
+        width: 39
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd31b57d65a3a4d359fc932ba32d6369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_20
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 393
+        width: 134
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a464e55986dda46b8ac6ff2a26a7118d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_21
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 362
+        width: 104
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3a786a5eebb469d9d2b8845d285fc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_22
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 333
+        width: 49
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d807ab7e84c24aa487f09c15d318ce1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 359
+        width: 123
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086e48962ea3844d1a2f09d728f1d1c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_24
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 347
+        width: 101
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742dadfe815f04450ba43b92ff2098df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_25
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 333
+        width: 141
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b4b1f1d07fd4314bd3fd8ee2a0d7b0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_26
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 309
+        width: 70
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aaeecfd1acb644328dc43ed0e4753f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_27
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 315
+        width: 110
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac44cbdc71144af58559a33793bd52b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_28
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 294
+        width: 110
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8352425b123466ba57ff0d61ad7a8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_29
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 277
+        width: 73
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 651782653df2144dbad9ef1d2e43928f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_30
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 258
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e533286aadf124f7a8bb0cb73a4f3e01
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_31
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 257
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7379cd9b19ea54107b284291097e2556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_32
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 260
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 022eabbdf97f64ffaa91bea978a9e3e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 254
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a879340aaae8543019df15a4a2b307ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_34
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 251
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5916ec7e52664b71828ee8d1dadadef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_35
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 258
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aede8d6b31c74d9aac467a3dead80d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_36
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 251
+        width: 7
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc380bf6c9cd4d37bf997781b475b51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_37
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 252
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d907f6a5a1bb3418f8d16d118c4f1795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 260
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3bfe37ae3d64602a6daf5173cde693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_39
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 257
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e40612886ee403e8faf97eeedc8ac5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_40
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 261
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dadaa6294b1411d9bca52d6aa27827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_41
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 269
+        width: 30
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31533c8691ac144bc840b7331cf9f215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_42
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 261
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b8143b828cc4075ae539256abdfd43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_43
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 256
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88df821188abd4c7b8c9a3deec5baf46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_44
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 254
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6eceb914ec44c539dd2445a66c8120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_45
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 255
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e68a981b203241a3be4a33d3ad9bd37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_46
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 256
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f7c8d0663d24553a496e3860e7c7fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_47
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 258
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b200104e95c9f4faab9cc7171d75d10b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_48
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 260
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e29199b8544a48a89da9421334f7233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_49
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 257
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2277fe3713140aeb9b2bd0eb1829a9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_50
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 255
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf24f83f615042fd89fd00dfbaef153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_51
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 255
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f01135f29d74d03b7c0f55d62d0784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_52
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 246
+        width: 85
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e97e20b333e94764b14af806024ae9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_53
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 261
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41df7dcfd738f4b63b7fd25db2e0a8c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_54
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 234
+        width: 92
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4bb45fae9bf4a95bda9ebd52a5cf1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_55
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 176
+        width: 71
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65c2f6b3527a645fe912213f6bdb8fa7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_56
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 191
+        width: 111
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8041246d4b311415c94ef5dee732515a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_57
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 181
+        width: 88
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d5e4be68266407399a3a1017c492f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_58
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 46
+        width: 18
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793b4bc8d26144fe28fd6be504b8b44f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_59
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 78
+        width: 16
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac26b78af8e7743cdb0219a68c20cd31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_60
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 139
+        width: 113
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64693551948e54dc89af990faffd6d61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_61
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 134
+        width: 95
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720f95a944a0a4353a732e3614835db9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_62
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 62
+        width: 30
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981cf5d4bd45c4ab1bfd164f2115f6f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_63
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 53
+        width: 22
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7f0970a49414e7cb42d3444aad762c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_64
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 53
+        width: 12
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a35486fa9e92e4bb5b6a93f74d744139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_65
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 89
+        width: 10
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f9aee719165462b86016b4a00e7644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_66
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 115
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62789bb2d26784a20a7f440b0a1fab7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_67
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 93
+        width: 59
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2dd9de306c6c42e2a05c3f3a8d83b09
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_68
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 105
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d84e5ba317694494a818100b2005e99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_69
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 96
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27b91ee58b6c4fe69a1ba21a80e70a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_70
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 100
+        width: 48
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c5d83e3b16c4d27b246288af54e63e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_71
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 60
+        width: 15
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c592c1f966e264849be47f797fea875a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_72
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 80
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59bec5eac828b4c8c8332cca80653858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_73
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 84
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad79b3b0555843b78856d0a3069947f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_74
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 67
+        width: 47
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe1eedfc9d114b45a1317a3b0b90d4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_75
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 87
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541a7d4c8993447518c451e1a02458d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_76
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 79
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961bee05aca27444b8994aad967810fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_77
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 82
+        width: 38
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7754c8c40d144de9e03be0471053bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_78
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 70
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0fc1c2cd1074fee92d4cdc3c7f1b3e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_79
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 69
+        width: 25
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f23220ec57f40eabfadd8fb9d18283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_80
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 64
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf9338e88d5b47498e88445db68c801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_81
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 53
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc1d77c73932f4a15b3a0cb111e34141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_82
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 72
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1982ab11c9e48c5b7b8532385d036b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_83
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 64
+        width: 51
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4d736636d48f485d9693a378b770d27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 57
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1438eb5540c646938dac63c28499122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_85
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 62
+        width: 27
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ec76ee0b7314de4a63427034fb6930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_86
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 55
+        width: 22
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e964c1f503d2b48ffa338ff0b671d064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_87
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 43
+        width: 41
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbc255dd4fd04104b94923bec60d69c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_88
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 46
+        width: 27
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b29bc646fc94298bf6c2dc72ebe15c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_89
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 44
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542ab01d32ee64f4ab54855689348d13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_90
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 45
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbceffdf365194e7b83ea2cdf83bcb69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_91
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 45
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f819a18e5c8fc49d6a43c63f1dca3e87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_92
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 6
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b282c2244999464496fedcd32457ecf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_93
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 19
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdc43313c3b44a2880c52e8a0903e21
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_94
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 30
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906d69e93176d4b398bad17b8d324c82
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_95
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 29
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e224160976c4d4b8afb305441ab9f2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_96
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 7
+        width: 25
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae612db2ae9741549318591aa0ce372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weapons_v_2_by_iskaksen_97
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 10
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a0432ea961649e3aec02794f00e670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c0e1a1d65ad0d4141be9844638a07e98
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,10 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour {
 
-	public GameObject follower;
+    public GameObject follower;
+    public GameObject UI;
 	public GameObject title;
 
 	public void QuitGame (){
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour {
         GameMaster.gm.paused = false;
         this.gameObject.SetActive (false);
 		title.SetActive (false);
+        UI.SetActive(true);
 	}
     private void Update()
     {

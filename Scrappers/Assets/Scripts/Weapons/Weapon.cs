@@ -101,10 +101,21 @@ public class Weapon : MonoBehaviour {
 		if (hit.collider != null){
             hit.collider.transform.GetComponent<Rigidbody2D>().AddForce(hit.normal * -Force);
             Enemy enemy = hit.collider.GetComponent<Enemy>();
-            if(enemy != null){
+            if (enemy != null)
+            {
                 enemy.DamageEnemy(Damage); //Damage enemy
                 //create sound at hitpoint
                 AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, 1f);
+            }
+            else
+            {
+                enemy = hit.transform.parent.GetComponent<Enemy>();
+                if (enemy != null)
+                {
+                    enemy.DamageEnemy(Damage); //Damage enemy
+                                               //create sound at hitpoint
+                    AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, 1f);
+                }
             }
 		}
 	}

@@ -12,6 +12,9 @@ TagManager:
   - Sounds
   - PauseMenu
   - Astar
+  - Enemy
+  - HealthBar
+  - GunHand
   layers:
   - Default
   - TransparentFX

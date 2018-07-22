@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
@@ -8,6 +8,8 @@ public class GameMaster : MonoBehaviour {
 	public GameObject spawnPoint;
     public GameObject pauseMenu;
     public GameObject pauseBG;
+    public GameObject UI;
+    public GameObject slot1;
     public GameObject player;
 	public AudioClip spawnClip;
     private AudioSource audioSource;
@@ -40,6 +42,7 @@ public class GameMaster : MonoBehaviour {
 
 	public void SpawnPlayer(int spawnDelay){
 		gm.StartCoroutine(gm.SpawnPlayerRoutine (spawnDelay));
+
 	}
 	public IEnumerator SpawnPlayerRoutine (int spawnDelay){
 		audioSource.clip = spawnClip;
@@ -53,8 +56,7 @@ public class GameMaster : MonoBehaviour {
 		Transform spawnObj = Instantiate (spawnPrefab, spawnPosition, spawnRotation);
 		Destroy (spawnObj.gameObject, 3);
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
-        EnemySpawner.StartSpawningEnemies();
-
+        slot1.GetComponent<Button>().onClick.Invoke();
 	}
 	public static void KillPlayer (Player player){
 		Destroy (player.gameObject);
@@ -63,18 +65,19 @@ public class GameMaster : MonoBehaviour {
     public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
-        EnemySpawner.RemoveEnemy();
     }
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
         pauseBG.SetActive(true);
+        UI.SetActive(false);
         Time.timeScale = 0;
     }
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
         pauseBG.SetActive(false);
+        UI.SetActive(true);
         Time.timeScale = 1;
         StartCoroutine(Unpause(.01f));
     }
