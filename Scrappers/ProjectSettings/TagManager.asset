@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - HealthBar
   - GunHand
+  - Sky
   layers:
   - Default
   - TransparentFX

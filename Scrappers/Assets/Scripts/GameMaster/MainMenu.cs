@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour {
 	}
     IEnumerator StartGame(){
         GameMaster.gm.LoadNewScene("Earth");
+        GameMaster.gm.gameObject.GetComponent<PlaceTiles>().gameStarted = true;
         yield return new WaitForSeconds(1f);
         Vector3 followerp = follower.transform.position;
         follower.GetComponent<IntroMovement>().enabled = false;

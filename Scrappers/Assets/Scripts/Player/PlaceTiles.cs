@@ -11,7 +11,7 @@ public class PlaceTiles : MonoBehaviour {
     private GridGraph gg;
 	public float placeDistance;
 	public float placeDepth;
-	public bool isGrounded;
+    public bool gameStarted;
 
 	private Vector3Int previous;
 	private Vector3Int currentCell;
@@ -39,24 +39,29 @@ public class PlaceTiles : MonoBehaviour {
 	// do late so that the player has a chance to move in update if necessary
 	private void LateUpdate()
 	{
-        placeDistance = camHorizontalExtend + 5;
-        placeDepth = camVerticalExtend + 5;
-		if (theTileMap == null) {
-			theTileMap = GameObject.FindGameObjectWithTag ("TileMap").GetComponent<Tilemap>();
-		}
+        if (gameStarted)
+        {
+            placeDistance = camHorizontalExtend + 5;
+            placeDepth = camVerticalExtend + 5;
+            if (theTileMap == null)
+            {
+                theTileMap = GameObject.FindGameObjectWithTag("TileMap").GetComponent<Tilemap>();
+            }
 
-		// get current grid location
-		currentCell = theTileMap.WorldToCell(cam.transform.position);
-		// add one in a direction (you'll have to change this to match your directional control)
-		currentCell.x += 1;
+            // get current grid location
+            currentCell = theTileMap.WorldToCell(cam.transform.position);
+            // add one in a direction (you'll have to change this to match your directional control)
+            currentCell.x += 1;
 
-		// if the position has changed
-		if (currentCell != previous) {
-			// spawn the floor
-			SpawnFloor ();
-			// save the new position for next frame
-			previous = currentCell;
-		}
+            // if the position has changed
+            if (currentCell != previous)
+            {
+                // spawn the floor
+                SpawnFloor();
+                // save the new position for next frame
+                previous = currentCell;
+            }
+        }
 	}
 	public void SpawnFloor() {
 		//place tiles to the right
