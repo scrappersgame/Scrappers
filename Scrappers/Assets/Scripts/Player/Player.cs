@@ -29,7 +29,6 @@ public class Player : MonoBehaviour {
     private GameObject currentGun;
 
 	void Awake (){
-		KillZone = GameObject.FindGameObjectWithTag ("KZ").transform;
         statusIndicator = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<StatusIndicator>();
 	}
     private void Start()
@@ -41,6 +40,8 @@ public class Player : MonoBehaviour {
         }
     }
     void Update () {
+        if (KillZone == null)
+            KillZone = GameObject.FindGameObjectWithTag("KZ").transform;
 		if (transform.position.y <= KillZone.position.y){
             DamagePlayer (stats.currentHealth);
         }else if(transform.position.y <-.5){

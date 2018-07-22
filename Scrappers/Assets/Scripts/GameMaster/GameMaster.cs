@@ -1,27 +1,39 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using Cinemachine;
 public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
+    [Header("Objects")]
 	public GameObject CamController;
 	public GameObject spawnPoint;
     public GameObject pauseMenu;
     public GameObject pauseBG;
     public GameObject UI;
     public GameObject slot1;
-    public GameObject player;
+    public Slider volumeSlider;
+    [Header("Prefabs")]
+    public Transform playerPrefab;
+    public Transform spawnPrefab;
 	public AudioClip spawnClip;
-    private AudioSource audioSource;
+    [Header("Variables")]
     public bool paused = true;
+    public float masterVolume = 0.5f;
+    public Scene currentScene;
 
 	void Awake (){
-		audioSource = GameObject.FindGameObjectWithTag ("Sounds").GetComponent<AudioSource>();
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}
 	}
-	void LateUpdate(){
+    private void Start()
+    {
+        gm.GetComponent<Fading>().BeginFade(-1);
+        SceneManager.LoadSceneAsync("Intro",LoadSceneMode.Additive);
+        currentScene = SceneManager.GetSceneByName("Intro");
+    }
+    void LateUpdate(){
         bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
         if (pauseButton && !paused) {
             pauseButton = false;
@@ -37,22 +49,17 @@ public class GameMaster : MonoBehaviour {
         }
 
 	}
-	public Transform playerPrefab;
-	public Transform spawnPrefab;
 
 	public void SpawnPlayer(int spawnDelay){
 		gm.StartCoroutine(gm.SpawnPlayerRoutine (spawnDelay));
 
 	}
 	public IEnumerator SpawnPlayerRoutine (int spawnDelay){
-		audioSource.clip = spawnClip;
 		yield return new WaitForSeconds (spawnDelay);
-		audioSource.Play ();
 		Vector3 spawnPosition = spawnPoint.transform.position;
 		Quaternion spawnRotation = spawnPoint.transform.rotation;
+        AudioSource.PlayClipAtPoint(spawnClip, spawnPosition, masterVolume);
 		Transform playerObj = Instantiate (playerPrefab, spawnPosition, spawnRotation);
-		player = playerObj.gameObject;
-		pauseMenu.GetComponent<PauseMenu> ().player = player;
 		Transform spawnObj = Instantiate (spawnPrefab, spawnPosition, spawnRotation);
 		Destroy (spawnObj.gameObject, 3);
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
@@ -84,5 +91,24 @@ public class GameMaster : MonoBehaviour {
     IEnumerator Unpause(float delay){
         yield return delay;
         paused = false;
+    }
+    public void ChangeVolume(){
+        masterVolume = volumeSlider.value;
+        AudioSource _source = GameObject.FindGameObjectWithTag("Sounds").GetComponent<AudioSource>();
+        _source.clip = spawnClip;
+        _source.volume = masterVolume;
+        _source.Play();
+    }
+    public void LoadNewScene(string _sceneName){
+        StartCoroutine(LoadScene(_sceneName));
+    }
+    IEnumerator LoadScene(string _sceneName)
+    {
+        gm.GetComponent<Fading>().BeginFade(1);
+        yield return new WaitForSeconds(1f);
+        SceneManager.UnloadSceneAsync(gm.currentScene);
+        SceneManager.LoadSceneAsync(_sceneName, LoadSceneMode.Additive);
+        gm.currentScene = SceneManager.GetSceneByName(_sceneName);
+        gm.GetComponent<Fading>().BeginFade(-1);
     }
 }

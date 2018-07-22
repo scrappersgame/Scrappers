@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
 
-	public Transform cam;
+	private Transform cam;
 	void Awake () {
 		cam = Camera.main.transform;
 	}

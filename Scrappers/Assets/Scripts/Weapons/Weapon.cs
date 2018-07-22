@@ -18,9 +18,9 @@ public class Weapon : MonoBehaviour {
 	public Transform MuzzleFlashPrefab;
 	public Color TrailColor;
     public AudioClip gunShot;
-	private AudioSource audioSource;
 	private Vector2 firePointPosition;
-	private Gradient gradient;
+    private Gradient gradient;
+    private AudioSource sounds;
 
     CameraShake camShake;
 
@@ -29,7 +29,7 @@ public class Weapon : MonoBehaviour {
 	Transform firePoint;
 	// Use this for initialization
 	void Awake () {
-		audioSource = GameObject.FindGameObjectWithTag ("Sounds").GetComponent<AudioSource>();
+        sounds = GameObject.FindGameObjectWithTag("Sounds").GetComponent<AudioSource>();
 		// select the point to create the bullets
 		firePoint = transform.Find("Muzzle");
 		if (firePoint == null){
@@ -54,8 +54,6 @@ public class Weapon : MonoBehaviour {
                 if (Input.GetButtonDown("Fire1"))
                 {
                     Shoot();
-                    audioSource.clip = gunShot;
-                    AudioSource.PlayClipAtPoint(gunShot, transform.position, EffectVolume);
                 }
             }
             else
@@ -64,14 +62,17 @@ public class Weapon : MonoBehaviour {
                 {
                     timeToFire = Time.time + (1f / fireRate);
                     Shoot();
-                    audioSource.clip = gunShot;
-                    AudioSource.PlayClipAtPoint(gunShot, transform.position, EffectVolume);
                 }
             }
         }
 	}
 
 	void Shoot () {
+        float masterVolume = GameMaster.gm.masterVolume;
+        sounds.clip = gunShot;
+        sounds.volume = EffectVolume * masterVolume;
+        sounds.loop = false;
+        sounds.Play();
 		firePointPosition = new Vector2 (firePoint.position.x, firePoint.position.y);
         int RotationOffset = 0;
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -99,13 +100,12 @@ public class Weapon : MonoBehaviour {
 			timeToSpawnEffect = Time.time + 1/EffectSpawnRate;
 		}
 		if (hit.collider != null){
-            hit.collider.transform.GetComponent<Rigidbody2D>().AddForce(hit.normal * -Force);
             Enemy enemy = hit.collider.GetComponent<Enemy>();
             if (enemy != null)
             {
                 enemy.DamageEnemy(Damage); //Damage enemy
                 //create sound at hitpoint
-                AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, 1f);
+                AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
             }
             else
             {
@@ -114,7 +114,7 @@ public class Weapon : MonoBehaviour {
                 {
                     enemy.DamageEnemy(Damage); //Damage enemy
                                                //create sound at hitpoint
-                    AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, 1f);
+                    AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
                 }
             }
 		}

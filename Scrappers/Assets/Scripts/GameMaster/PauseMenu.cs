@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PauseMenu : MonoBehaviour {
-
-	public GameObject player;
-
 	public void QuitGame (){
 		Application.Quit();
 	}

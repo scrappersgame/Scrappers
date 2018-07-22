@@ -86,7 +86,7 @@ MonoBehaviour:
   Force: 100
   Range: 20
   EffectSpawnRate: 10
-  EffectVolume: 0.7
+  EffectVolume: 0.2
   FlareSize: 0.4
   CamShakeAmount: 0.02
   CamShakeLength: 0.1

@@ -97,7 +97,7 @@ namespace UnityStandardAssets._2D
                 }
             }
             // If the player should jump...
-            if (jump && ((m_Grounded &&  m_Anim.GetBool("Ground")) || (JumpCount < MaxJumps)))
+            if (jump && m_Grounded &&  m_Anim.GetBool("Ground"))
             {
                 // Add a vertical force to the player.
                 JumpCount += 1;

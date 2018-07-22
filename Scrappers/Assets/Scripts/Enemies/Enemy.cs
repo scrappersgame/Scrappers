@@ -76,7 +76,8 @@ public class Enemy : MonoBehaviour {
             }
             if (destroySound != null)
             {
-                AudioSource.PlayClipAtPoint(destroySound, transform.position, 1f);
+                float masterVolume = GameMaster.gm.masterVolume;
+                AudioSource.PlayClipAtPoint(destroySound, transform.position, masterVolume);
             }
         }
     }
