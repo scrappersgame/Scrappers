@@ -16,6 +16,7 @@ TagManager:
   - HealthBar
   - GunHand
   - Sky
+  - Music
   layers:
   - Default
   - TransparentFX

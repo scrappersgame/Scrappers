@@ -5,12 +5,12 @@ using UnityEngine;
 public class Parallaxing : MonoBehaviour {
 
 	public Transform[] backgrounds;		// Array of all the moving bits
-	public float smoothing = 1f;			// How smooth are you? must be > 0
+	public float smoothing = 1f;		// How smooth are you? must be > 0
 
-	private float[] plaxScales;  			// proportion of movement
-	private int bg_length;					// number of backgrounds
-	private Transform cam;						// reference to main camera
-	private Vector3 previousCamPos;		// stores old cam data
+	private float[] plaxScales;  		// proportion of movement
+	private int bg_length;				// number of backgrounds
+	private Transform cam;				// reference to main camera
+	private Vector3 previousCamPos;	    // stores old cam data
 
 	// called before Start() good for setting up references
 	void Awake () {

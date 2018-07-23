@@ -112,10 +112,12 @@ public class GameMaster : MonoBehaviour {
     // crank it to 11!
     public void ChangeVolume(){
         masterVolume = volumeSlider.value;
-        AudioSource _source = GameObject.FindGameObjectWithTag("Sounds").GetComponent<AudioSource>();
-        _source.clip = spawnClip;
-        _source.volume = masterVolume;
-        _source.Play();
+        AudioSource _soundsSource = GameObject.FindGameObjectWithTag("Sounds").GetComponent<AudioSource>();
+        AudioSource _musicSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
+        _musicSource.volume = masterVolume;
+        _soundsSource.clip = spawnClip;
+        _soundsSource.volume = masterVolume;
+        _soundsSource.Play();
     }
     // we're going places
     public void LoadNewScene(string _sceneName){
