@@ -30,10 +30,19 @@ public class GameMaster : MonoBehaviour {
 	}
     private void Start()
     {
+        // need to call coroutine to wait for game to load
+        StartCoroutine(LoadIntro());
+    }
+    IEnumerator LoadIntro(){
         // fade in on start of game
-        gm.GetComponent<Fading>().BeginFade(-1);
-        SceneManager.LoadSceneAsync("Intro",LoadSceneMode.Additive); //loading main menu and intro
+        SceneManager.LoadSceneAsync("Intro", LoadSceneMode.Additive); //loading main menu and intro
         currentScene = SceneManager.GetSceneByName("Intro"); //so I can unload later
+        while (!SceneLoaded("Intro"))
+        {
+            yield return new WaitForSeconds(0.5f);
+            // maybe put some loading stuff here...
+        }
+        gm.GetComponent<Fading>().BeginFade(-1);
     }
     void LateUpdate(){
         // listening for pause button

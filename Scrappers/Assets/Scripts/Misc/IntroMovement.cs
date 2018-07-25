@@ -19,10 +19,10 @@ public class IntroMovement : MonoBehaviour {
             transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
             transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
         } else {
-            if (curPos.y < 400) // then first star to your left and straight on till morning.
+            if (curPos.y < 600) // then first star to your left and straight on till morning.
             {
                 transform.Translate(Vector3.up * Time.deltaTime * moveSpeed);
-                if (curPos.y > 380){
+                if (curPos.y > 580){
                     moveSpeed = Mathf.Lerp(moveSpeed, 0, .01f); // slow it down baybee
                 }
             }
