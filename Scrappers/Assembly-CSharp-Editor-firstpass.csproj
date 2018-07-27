@@ -61,6 +61,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Plugins\Ink\Editor\Compiler\Auto Compiler\InkPostProcessor.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Compiler\InkCompiler.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Inspector\File Icons\InkBrowserIcons.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Inspector\Ink Inspector\DefaultAssetEditor.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Inspector\Ink Inspector\DefaultAssetInspector.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Inspector\Ink Inspector\InkInspector.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkFile.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkLibrary.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkLibraryEditor.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkMetaFile.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Library\InkMetaLibrary.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Settings\InkSettings.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Ink Settings\InkSettingsEditor.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Player Window\InkPlayerWindow.cs" />
+    <Compile Include="Assets\Plugins\Ink\Editor\Tools\InkEditorUtils.cs" />
     <Compile Include="Assets\Standard Assets\Cinemachine\Base\Editor\Editors\CinemachineBasicMultiChannelPerlinEditor.cs" />
     <Compile Include="Assets\Standard Assets\Cinemachine\Base\Editor\Editors\CinemachineBlenderSettingsEditor.cs" />
     <Compile Include="Assets\Standard Assets\Cinemachine\Base\Editor\Editors\CinemachineBlendListCameraEditor.cs" />
@@ -112,6 +127,7 @@
     <Compile Include="Assets\Standard Assets\Tilemap\Brushes\Tint Brush\Scripts\Editor\TintBrush.cs" />
     <Compile Include="Assets\Standard Assets\Tilemap\Tiles\Rule Override Tile\Scripts\Editor\RuleOverrideTileEditor.cs" />
     <Compile Include="Assets\Standard Assets\Tilemap\Tiles\Rule Tile\Scripts\Editor\RuleTileEditor.cs" />
+    <None Include="Assets\Plugins\Ink\Editor\Resources\InkDefaultTemplate.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
