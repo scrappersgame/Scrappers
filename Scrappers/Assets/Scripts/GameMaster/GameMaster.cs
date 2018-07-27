@@ -6,27 +6,33 @@ using Cinemachine;
 public class GameMaster : MonoBehaviour {
 	public static GameMaster gm;
     [Header("Objects")]
-	public GameObject CamController;    // the thing that tells the camera where to go.
-    public GameObject spawnPoint;       // the thing that tells the player where to (re)start.
-    public GameObject pauseMenu;        // the thing that you click to turn the volume down.
-    public GameObject pauseBG;          // the thing that makes it easier to read the pause text.
-    public GameObject UI;               // the thing that tells you what's up with your dude.
-    public GameObject slot1;            // the first thing in your hotbar.
-    public Slider volumeSlider;         // the thing that controls the volume.
+    public GameObject CamController;                // the thing that tells the camera where to go.
+    public GameObject spawnPoint;                   // the thing that tells the player where to (re)start.
+    public GameObject pauseMenu;                    // the thing that you click to turn the volume down.
+    public GameObject pauseBG;                      // the thing that makes it easier to read the pause text.
+    public GameObject UI;                           // the thing that tells you what's up with your dude.
+    public GameObject slot1;                        // the first thing in your hotbar.
+    public Slider volumeSlider;                     // the thing that controls the volume.
+    public AudioClip introMusic;                    // the music that plays at the start of the game.
     [Header("Prefabs")]
-    public Transform playerPrefab;      // your dude.
-    public Transform spawnPrefab;       // the particles that surround your dude when you (re)spawn.
-    public AudioClip spawnClip;         // the sound your dude makes when you (re)spawn.
+    public Transform playerPrefab;                  // your dude.
+    public Transform spawnPrefab;                   // the particles that surround your dude when you (re)spawn.
+    public AudioClip spawnClip;                     // the sound your dude makes when you (re)spawn.
     [Header("Variables")]
-    public bool paused = true;          // how do I know if the game is paused?
-    public float masterVolume = 0.5f;   // why is it so loud?
-    public Scene currentScene;          // where am I right now?
+    public bool paused = true;                      // how do I know if the game is paused?
+    public float masterVolume = 0.5f;               // why is it so loud?
+    public Scene currentScene;                      // where am I right now?
+    private AudioSourceCrossfade _musicSource;      // where is that music coming from?
+
+
+
 
 	void Awake (){
         // setting up gm object so this can be used by any script
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}
+        _musicSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSourceCrossfade>();
 	}
     private void Start()
     {
@@ -35,6 +41,9 @@ public class GameMaster : MonoBehaviour {
     }
     IEnumerator LoadIntro(){
         // fade in on start of game
+        _musicSource.volume = masterVolume;
+        _musicSource.Play(introMusic);
+        _musicSource.SetVolume(masterVolume);
         SceneManager.LoadSceneAsync("Intro", LoadSceneMode.Additive); //loading main menu and intro
         currentScene = SceneManager.GetSceneByName("Intro"); //so I can unload later
         while (!SceneLoaded("Intro"))
@@ -122,8 +131,7 @@ public class GameMaster : MonoBehaviour {
     public void ChangeVolume(){
         masterVolume = volumeSlider.value;
         AudioSource _soundsSource = GameObject.FindGameObjectWithTag("Sounds").GetComponent<AudioSource>();
-        AudioSource _musicSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSource>();
-        _musicSource.volume = masterVolume;
+        _musicSource.SetVolume(masterVolume);
         _soundsSource.clip = spawnClip;
         _soundsSource.volume = masterVolume;
         _soundsSource.Play();

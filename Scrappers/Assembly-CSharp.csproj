@@ -191,7 +191,7 @@
     <Compile Include="Assets\Scripts\GameMaster\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\GameMaster\SceneController.cs" />
     <Compile Include="Assets\Scripts\GameMaster\WaveSpawner.cs" />
-    <Compile Include="Assets\Scripts\Misc\DoubleAudioSource.cs" />
+    <Compile Include="Assets\Scripts\Misc\AudioSourceCrossfade.cs" />
     <Compile Include="Assets\Scripts\Misc\IntroMovement.cs" />
     <Compile Include="Assets\Scripts\Misc\Tiling.cs" />
     <Compile Include="Assets\Scripts\Misc\Twinkle.cs" />
