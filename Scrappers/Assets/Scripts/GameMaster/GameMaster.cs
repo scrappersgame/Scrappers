@@ -4,7 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Cinemachine;
 public class GameMaster : MonoBehaviour {
-	public static GameMaster gm;
+    public static GameMaster gm;
     [Header("Objects")]
     public GameObject CamController;                // the thing that tells the camera where to go.
     public GameObject spawnPoint;                   // the thing that tells the player where to (re)start.
@@ -19,6 +19,7 @@ public class GameMaster : MonoBehaviour {
     public Transform spawnPrefab;                   // the particles that surround your dude when you (re)spawn.
     public AudioClip spawnClip;                     // the sound your dude makes when you (re)spawn.
     [Header("Variables")]
+    public bool gameStarted = false;                // has the game started yet?
     public bool paused = true;                      // how do I know if the game is paused?
     public float masterVolume = 0.5f;               // why is it so loud?
     public Scene currentScene;                      // where am I right now?
@@ -32,18 +33,18 @@ public class GameMaster : MonoBehaviour {
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}
-        _musicSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSourceCrossfade>();
 	}
     private void Start()
     {
+        _musicSource = AudioSourceCrossfade.cf;
         // need to call coroutine to wait for game to load
         StartCoroutine(LoadIntro());
     }
     IEnumerator LoadIntro(){
         // fade in on start of game
         _musicSource.volume = masterVolume;
-        _musicSource.Play(introMusic);
         _musicSource.SetVolume(masterVolume);
+        _musicSource.Play(introMusic);
         SceneManager.LoadSceneAsync("Intro", LoadSceneMode.Additive); //loading main menu and intro
         currentScene = SceneManager.GetSceneByName("Intro"); //so I can unload later
         while (!SceneLoaded("Intro"))
@@ -51,6 +52,9 @@ public class GameMaster : MonoBehaviour {
             yield return new WaitForSeconds(0.5f);
             // maybe put some loading stuff here...
         }
+        yield return new WaitForSeconds(0.1f);
+        Collider2D _skyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
+        CamController.GetComponent<CinemachineConfiner>().m_BoundingShape2D = _skyBox;
         gm.GetComponent<Fading>().BeginFade(-1);
     }
     void LateUpdate(){
@@ -143,6 +147,9 @@ public class GameMaster : MonoBehaviour {
     // now we're actually going places, I lied to you before.
     IEnumerator LoadScene(string _sceneName)
     {
+        // sky is no longer the limit
+        Destroy(CamController.GetComponent<CinemachineConfiner>());
+        CamController.AddComponent<CinemachineConfiner>();
         // paint it black
         gm.GetComponent<Fading>().BeginFade(1); 
         yield return new WaitForSeconds(1f);
@@ -156,15 +163,16 @@ public class GameMaster : MonoBehaviour {
             yield return new WaitForSeconds(0.5f);
             // maybe put some loading stuff here...
         }
+        yield return new WaitForSeconds(0.1f);
         // finally got there, lets remember where we are...
         gm.currentScene = SceneManager.GetSceneByName(_sceneName);
         // what are the limits to the sky?
-        Collider2D _skyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<BoxCollider2D>();
+        Collider2D _skyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
         CamController.GetComponent<CinemachineConfiner>().m_BoundingShape2D = _skyBox;
         // back to life, back to reality
         gm.GetComponent<Fading>().BeginFade(-1);
     }
-
+    // how do we know if we're there yet?
     bool SceneLoaded(string _sceneName)
     {
         for (int i = 0; i < SceneManager.sceneCount; ++i)

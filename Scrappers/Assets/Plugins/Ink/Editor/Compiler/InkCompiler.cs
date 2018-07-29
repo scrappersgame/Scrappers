@@ -47,7 +47,7 @@ namespace Ink.UnityIntegration {
 		}
 
 		static InkCompiler () {
-			#if UNITY_2017 || UNITY_2018
+            #if UNITY_2017 || UNITY_2018
 			EditorApplication.playModeStateChanged += OnPlayModeChange;
 			#else
 			EditorApplication.playmodeStateChanged += LegacyOnPlayModeChange;

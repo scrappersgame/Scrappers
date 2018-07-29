@@ -94,7 +94,7 @@ Material:
     - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
-    - _OutlineColor: {r: 0.5372549, g: 0.32156864, b: 0.18039216, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
@@ -1033,15 +1033,54 @@ MonoBehaviour:
     xAdvance: 88.15625
     scale: 1
   m_kerningInfo:
-    kerningPairs: []
+    kerningPairs:
+    - m_FirstGlyph: 105
+      m_FirstGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: -6.91
+        yAdvance: 0
+      m_SecondGlyph: 116
+      m_SecondGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: 0
+        yAdvance: 0
+      xOffset: 0
+    - m_FirstGlyph: 116
+      m_FirstGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: -9.94
+        yAdvance: 0
+      m_SecondGlyph: 105
+      m_SecondGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: -12.17
+        yAdvance: 0
+      xOffset: 0
+    - m_FirstGlyph: 119
+      m_FirstGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: -20
+        yAdvance: 0
+      m_SecondGlyph: 32
+      m_SecondGlyphAdjustments:
+        xPlacement: 0
+        yPlacement: 0
+        xAdvance: -20
+        yAdvance: 0
+      xOffset: 0
   m_kerningPair:
-    m_FirstGlyph: 0
+    m_FirstGlyph: 105
     m_FirstGlyphAdjustments:
       xPlacement: 0
       yPlacement: 0
       xAdvance: 0
       yAdvance: 0
-    m_SecondGlyph: 0
+    m_SecondGlyph: 116
     m_SecondGlyphAdjustments:
       xPlacement: 0
       yPlacement: 0

@@ -107,7 +107,7 @@ public class Weapon : MonoBehaviour {
                 //create sound at hitpoint
                 AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
             }
-            else
+            else if (hit.transform.parent != null)
             {
                 enemy = hit.transform.parent.GetComponent<Enemy>();
                 if (enemy != null)

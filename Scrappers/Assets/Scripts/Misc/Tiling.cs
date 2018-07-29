@@ -5,19 +5,16 @@ using UnityEngine;
 [RequireComponent (typeof(SpriteRenderer))]
 
 public class Tiling : MonoBehaviour {
-	public int offsetX = 2; //distance between edge of camera and new buddy
-	public bool hasRightBuddy = false;
-	public bool hasLeftBuddy = false;
+	public int offsetX = 2;                 // distance between edge of camera and new buddy
+	public bool reverseScale = true;        // used if the sprite is not repeatable
 
-	public bool reverseScale = true; //used if the sprite is not
-
-	private float spriteWidth = 0f; //width of texture
-	private Camera cam;
-	private Transform myTransform;
+    private bool hasLeftBuddy = false;      // Clowns to the left of me
+    private bool hasRightBuddy = false;     // Jokers to the right
+	private float spriteWidth = 0f;         // width of texture
+	private Camera cam;                     // how you see dat?
 
 	void Awake(){
 		cam = Camera.main;
-		myTransform = transform;
 	}
 
 
@@ -37,8 +34,8 @@ public class Tiling : MonoBehaviour {
 			float camHorizontalExtend = cam.orthographicSize * Screen.width/Screen.height;
 
 			// calculate how far the sprite extends beyond the camera
-			float edgeVisiblePositionRight = (myTransform.position.x + spriteWidth/2) - camHorizontalExtend;
-			float edgeVisiblePositionLeft = (myTransform.position.x - spriteWidth/2) + camHorizontalExtend;
+            float edgeVisiblePositionRight = (transform.position.x + spriteWidth/2) - camHorizontalExtend;
+            float edgeVisiblePositionLeft = (transform.position.x - spriteWidth/2) + camHorizontalExtend;
 
 			if (cam.transform.position.x >= edgeVisiblePositionRight - offsetX && hasRightBuddy == false){
 				MakeNewBuddy(1);
@@ -54,15 +51,15 @@ public class Tiling : MonoBehaviour {
 	// fuction to create buddy, requires side indicator (-1 or 1)
 	void MakeNewBuddy (int rightOrLeft) {
 		// caculate buddy position
-		Vector3 newPosition = new Vector3 (myTransform.position.x + spriteWidth * rightOrLeft, myTransform.position.y, myTransform.position.z);
+        Vector3 newPosition = new Vector3 (transform.position.x + spriteWidth * rightOrLeft, transform.position.y, transform.position.z);
 		// make new buddy
-		Transform newBuddy = Instantiate (myTransform, newPosition, myTransform.rotation) as Transform;
+        Transform newBuddy = Instantiate (transform, newPosition, transform.rotation) as Transform;
 
 		if(reverseScale == true){
 			newBuddy.localScale = new Vector3 (newBuddy.localScale.x*-1,newBuddy.localScale.y,newBuddy.localScale.z);
 		}
 
-		newBuddy.parent = myTransform.parent;
+        newBuddy.parent = transform.parent;
 		if (rightOrLeft > 0){
 			newBuddy.GetComponent<Tiling>().hasLeftBuddy = true;
 		} else {

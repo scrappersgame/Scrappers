@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AudioSourceCrossfade : MonoBehaviour
 {
-
+    public static AudioSourceCrossfade cf;
     private AudioSource[] _player;
     private IEnumerator[] fader = new IEnumerator[2];
     private int ActivePlayer = 0;
@@ -50,6 +50,10 @@ public class AudioSourceCrossfade : MonoBehaviour
     /// </summary>
     private void Awake()
     {
+        if (cf == null)
+        {
+            cf = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSourceCrossfade>();
+        }
         //Generate the two AudioSources
         _player = new AudioSource[2]{
             gameObject.AddComponent<AudioSource>(),

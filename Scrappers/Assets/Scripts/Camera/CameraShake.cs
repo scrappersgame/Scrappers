@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraShake : MonoBehaviour {
-    public Camera mainCam;
+    private Camera mainCam;
     private float shakeAmount = 0;
     private void Awake()
     {

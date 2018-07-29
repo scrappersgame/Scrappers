@@ -44,8 +44,6 @@ public class Player : MonoBehaviour {
             KillZone = GameObject.FindGameObjectWithTag("KZ").transform;
 		if (transform.position.y <= KillZone.position.y){
             DamagePlayer (stats.currentHealth);
-        }else if(transform.position.y <-.5){
-            transform.position = new Vector3(transform.position.x, 0, transform.position.z);
         }
     }
 	public void DamagePlayer (int damage) {

@@ -75,7 +75,8 @@ public class EnemyAI : MonoBehaviour {
             }
             yield break;
         }
-        seeker.StartPath(transform.position, target.position, OnPathComplete);
+        Vector3 _targetPosition = new Vector3(target.position.x, target.position.y + 1, target.position.z);
+        seeker.StartPath(transform.position, _targetPosition, OnPathComplete);
 
         yield return new WaitForSeconds(1f / updateRate);
         StartCoroutine(UpdatePath());
