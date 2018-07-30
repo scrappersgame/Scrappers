@@ -244,3 +244,7 @@
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.csproj.CoreCompileInputs.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.dll
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.pdb
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.WebGLModule.dll
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll.mdb
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.xml
