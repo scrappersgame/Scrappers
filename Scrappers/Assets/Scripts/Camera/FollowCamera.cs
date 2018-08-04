@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class CameraFollow : MonoBehaviour {
+public class FollowCamera: MonoBehaviour {
 
 	private Transform cam;
 	void Awake () {
