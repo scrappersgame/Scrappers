@@ -14,6 +14,7 @@ public class GameMaster : MonoBehaviour {
     public GameObject slot1;                        // the first thing in your hotbar.
     public Slider volumeSlider;                     // the thing that controls the volume.
     public AudioClip introMusic;                    // the music that plays at the start of the game.
+    public PolygonCollider2D mainSkyBox;            // the box that defines the sky.
     [Header("Prefabs")]
     public Transform playerPrefab;                  // your dude.
     public Transform spawnPrefab;                   // the particles that surround your dude when you (re)spawn.
@@ -53,9 +54,37 @@ public class GameMaster : MonoBehaviour {
             // maybe put some loading stuff here...
         }
         yield return new WaitForSeconds(0.1f);
-        Collider2D _skyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
-        CamController.GetComponent<CinemachineConfiner>().m_BoundingShape2D = _skyBox;
+        // skybox controls the camera limits, but need to be in persistent space
+        UpdateSkybox();
         gm.GetComponent<Fading>().BeginFade(-1);
+    }
+    void UpdateSkybox(){
+        // getting new sky dimensions
+        PolygonCollider2D _newSkyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
+        Vector2[] _skypoints = new Vector2[_newSkyBox.points.Length];   // setting up empty array to hold points later
+        float yDifference = 0;                                          // setting up offset for later
+
+        // iterating through all the points in the new skybox to get difference in y
+        for (int i = 0; i < _newSkyBox.points.Length; i++){
+
+            //transforming points to world coordinates
+            _skypoints[i] = new Vector2(_newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).x, _newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).y + yDifference);
+            if (_skypoints[i].y < mainSkyBox.transform.position.y)
+            {
+                // if y of point is lower, set the difference and move the skybox
+                yDifference = mainSkyBox.transform.position.y - _skypoints[i].y;
+                mainSkyBox.transform.position = new Vector3(mainSkyBox.transform.position.x, _skypoints[i].y, mainSkyBox.transform.position.z);
+            }
+        }
+
+        // iterating through all the points again, adding the difference
+        for (int i = 0; i < _newSkyBox.points.Length; i++)
+        {
+            _skypoints[i] = new Vector2(_newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).x, _newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).y + yDifference);
+        }
+
+        mainSkyBox.points = _skypoints;           // applying the new points to the skybox that is hooked up to the camera
+        mainSkyBox.SetPath(0, mainSkyBox.points); // for some reason you need to draw the paths too...
     }
     void LateUpdate(){
         // listening for pause button
@@ -147,9 +176,6 @@ public class GameMaster : MonoBehaviour {
     // now we're actually going places, I lied to you before.
     IEnumerator LoadScene(string _sceneName)
     {
-        // sky is no longer the limit
-        Destroy(CamController.GetComponent<CinemachineConfiner>());
-        CamController.AddComponent<CinemachineConfiner>();
         // paint it black
         gm.GetComponent<Fading>().BeginFade(1); 
         yield return new WaitForSeconds(1f);
@@ -167,8 +193,7 @@ public class GameMaster : MonoBehaviour {
         // finally got there, lets remember where we are...
         gm.currentScene = SceneManager.GetSceneByName(_sceneName);
         // what are the limits to the sky?
-        Collider2D _skyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
-        CamController.GetComponent<CinemachineConfiner>().m_BoundingShape2D = _skyBox;
+        UpdateSkybox();
         // back to life, back to reality
         gm.GetComponent<Fading>().BeginFade(-1);
     }
