@@ -48,7 +48,7 @@ public class Weapon : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (!GameMaster.gm.paused){
+        if (!GameMaster.gm.paused && !GameMaster.gm.speaking){
             if (fireRate == 0)
             {
                 if (Input.GetButtonDown("Fire1"))

@@ -11,17 +11,17 @@ Handler: Hey what’s yur name, kid? Can’t work with someone if’n I don’t 
 
 === name_given ===
 Hal: {Nice to meet ya, {name}. I’m Hal, I’ll be your handler this evenin’, gonna be keepin’ tracka ya to make sure you don’t be runnin’ off with that fairly expensive piece of hardware you got on your back. Now let’s get you out there scrappin’ so you can start payin’ off summa that debt you owe ol’ grouchy britches. Head on outside and I’ll help you find the good bits. | Anything else?}
-* Wait, how[?] will you know? what the good bits are? Are you... spying on me?
+* Wait, how[?] will you know what the good bits are? Are you... spying on me?
     Hal: O'course I'm watchin' ya, how else will I know if you met yur quota? That thing on yur back's got a full spectrum scanner in it, I can see more about what's goin on 'round ya than you can.
         * * Who are you?[] Where am I? What the hell is going on?
-            Hal: You get hit in the head or sumthin boy? I'm your scrappin' handler. Now tell me your name before I scrap you and throw away the blueprint...
+            Hal: You get hit in the head or sumthin boy? I'm your scrappin' handler. Now lets go before I scrap you and throw away the blueprint...
                 * * * Alright, lets go.
                     ->END
         * * Alright, lets go.
             ->END
 * Who are you?[] Where am I? What the hell is going on?
-    Hal: You get hit in the head or sumthin boy? I'm your scrappin' handler. Now tell me your name before I scrap you and throw away the blueprint...
-        * * Wait, how[?] will you know? what the good bits are? Are you... spying on me?
+    Hal: You get hit in the head or sumthin boy? I'm your scrappin' handler. Now lets go before I scrap you and throw away the blueprint...
+        * * Wait, how[?] will you know what the good bits are? Are you... spying on me?
             Hal: O'course I'm watchin' ya, how else will I know if you met yur quota? That thing on yur back's got a full spectrum scanner in it, I can see more about what's goin on 'round ya than you can.
                 * * * Alright, lets go.
                     ->END

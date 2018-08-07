@@ -22,6 +22,7 @@ public class GameMaster : MonoBehaviour {
     [Header("Variables")]
     public bool gameStarted = false;                // has the game started yet?
     public bool paused = true;                      // how do I know if the game is paused?
+    public bool speaking = true;                    // how do I know someone is talking?
     public float masterVolume = 0.5f;               // why is it so loud?
     public Scene currentScene;                      // where am I right now?
     private AudioSourceCrossfade _musicSource;      // where is that music coming from?
