@@ -9,6 +9,8 @@ TODO get name from save data
 Handler: Hey what’s yur name, kid? Can’t work with someone if’n I don’t know their name first…
 -> END
 
+
+
 === name_given ===
 Hal: {Nice to meet ya, {name}. I’m Hal, I’ll be your handler this evenin’, gonna be keepin’ tracka ya to make sure you don’t be runnin’ off with that fairly expensive piece of hardware you got on your back. Now let’s get you out there scrappin’ so you can start payin’ off summa that debt you owe ol’ grouchy britches. Head on outside and I’ll help you find the good bits. | Anything else?}
 * Wait, how[?] will you know what the good bits are? Are you... spying on me?

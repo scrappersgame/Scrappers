@@ -6,21 +6,22 @@ public class WaveSpawner : MonoBehaviour {
 
     [System.Serializable]
     public class Wave {
-        public string name;
-        public Transform enemy;
-        public int count;
-        public float rate;
+        public string name;                             // What is this wave called?
+        public Transform enemy;                         // What is this wave spawning?
+        public int count;                               // How many is it spawning?
+        public float rate;                              // How fast is it spawning?
     }
 
-    public Wave[] waves;
-    public float waveDelay = 5f;
-    public int spawnDistance = 25;
+    public Wave[] waves;                                // list of waves
+    public float waveDelay = 5f;                        // delay between waves
+    public int spawnDistance = 25;                      // distance away from player enemies spawn
+    public int repetitions = 0;                         // amount of times the waves will repeat (0 = infinite)
 
-    private int waveMultiplier;
-    private int nextWave = 0;
-    private float waveCountdown;
-    private float searchCountdown = 1f;
-    private SpawnState state = SpawnState.COUNTING;
+    private int waveMultiplier;                         // add more when we repeat
+    private int nextWave = 0;                           // number of the wave after the current wave
+    private float waveCountdown;                        // countdown to next wave start
+    private float searchDelay = 1f;                     // delay between checking for enemies
+    private SpawnState state = SpawnState.COUNTING;     // 
 
     private void Start()
     {
@@ -32,8 +33,10 @@ public class WaveSpawner : MonoBehaviour {
     {
         if (GameMaster.gm.gameStarted)
         {
+            // have we stopped spawning?
             if (state == SpawnState.WAITING)
             {
+                // wait for all the enemies to be dead before moving on
                 if (!EnemyIsAlive())
                 {
                     WaveCompleted();
@@ -43,7 +46,7 @@ public class WaveSpawner : MonoBehaviour {
                     return;
                 }
             }
-
+            //
             if (waveCountdown <= 0)
             {
                 if (state != SpawnState.SPAWNING)
@@ -63,24 +66,33 @@ public class WaveSpawner : MonoBehaviour {
     void WaveCompleted(){
         state = SpawnState.COUNTING;
         waveCountdown = waveDelay;
-
+        // are we at the end of the waves?
         if (nextWave + 1 > waves.Length - 1)
         {
-            //go back to first wave
-            waveMultiplier++;
-            nextWave = 0;
+            // should we repeat?
+            if (repetitions == 0 || repetitions > waveMultiplier)
+            {
+                //go back to first wave
+                waveMultiplier++;
+                nextWave = 0;
+            }else{
+                
+                //stop spawning
+                this.enabled = false;
+            }
         }
         else
         {
+            // keep em coming!
             nextWave++;
         }
     }
 
     bool EnemyIsAlive()
     {
-        searchCountdown -= Time.deltaTime;
-        if (searchCountdown <= 0) { 
-            searchCountdown = 1f;
+        searchDelay -= Time.deltaTime;
+        if (searchDelay <= 0) { 
+            searchDelay = 1f;
             if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
             {
                 return false;

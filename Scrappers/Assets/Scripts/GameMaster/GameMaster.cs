@@ -3,8 +3,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Cinemachine;
+
 public class GameMaster : MonoBehaviour {
     public static GameMaster gm;
+
     [Header("Objects")]
     public GameObject CamController;                // the thing that tells the camera where to go.
     public GameObject spawnPoint;                   // the thing that tells the player where to (re)start.
@@ -27,28 +29,27 @@ public class GameMaster : MonoBehaviour {
     public Scene currentScene;                      // where am I right now?
     private AudioSourceCrossfade _musicSource;      // where is that music coming from?
 
-
-
-
-	void Awake (){
+    void Awake (){
         // setting up gm object so this can be used by any script
 		if (gm == null) {
 			gm = GameObject.FindGameObjectWithTag ("GM").GetComponent<GameMaster>();
 		}
 	}
+
     private void Start()
     {
         _musicSource = AudioSourceCrossfade.cf;
         // need to call coroutine to wait for game to load
         StartCoroutine(LoadIntro());
     }
+
     IEnumerator LoadIntro(){
         // fade in on start of game
         _musicSource.volume = masterVolume;
         _musicSource.SetVolume(masterVolume);
         _musicSource.Play(introMusic);
-        SceneManager.LoadSceneAsync("Intro", LoadSceneMode.Additive); //loading main menu and intro
-        currentScene = SceneManager.GetSceneByName("Intro"); //so I can unload later
+        SceneManager.LoadSceneAsync("Intro", LoadSceneMode.Additive);   //loading main menu and intro
+        currentScene = SceneManager.GetSceneByName("Intro");            //so I can unload later
         while (!SceneLoaded("Intro"))
         {
             yield return new WaitForSeconds(0.5f);
@@ -59,6 +60,7 @@ public class GameMaster : MonoBehaviour {
         UpdateSkybox();
         gm.GetComponent<Fading>().BeginFade(-1);
     }
+
     void UpdateSkybox(){
         // getting new sky dimensions
         PolygonCollider2D _newSkyBox = GameObject.FindGameObjectWithTag("Sky").GetComponent<PolygonCollider2D>();
@@ -87,6 +89,7 @@ public class GameMaster : MonoBehaviour {
         mainSkyBox.points = _skypoints;           // applying the new points to the skybox that is hooked up to the camera
         mainSkyBox.SetPath(0, mainSkyBox.points); // for some reason you need to draw the paths too...
     }
+
     void LateUpdate(){
         // listening for pause button
         bool pauseButton = Input.GetKeyDown(KeyCode.Escape);
@@ -95,6 +98,7 @@ public class GameMaster : MonoBehaviour {
             paused = true;
 			PauseGame();
         }
+
         // removing extra players (for now)
         int playerCount = GameObject.FindGameObjectsWithTag("Player").Length;
         if (playerCount >1){
@@ -105,9 +109,10 @@ public class GameMaster : MonoBehaviour {
         }
 
 	}
+
+
     // Spawn method to call the Spawn coroutine because you can't call a subroutine from another script
 	public void SpawnPlayer(int spawnDelay){
-        
 		gm.StartCoroutine(gm.SpawnPlayerRoutine (spawnDelay));
 	}
 
@@ -129,16 +134,19 @@ public class GameMaster : MonoBehaviour {
         // activate first item in hotbar
         slot1.GetComponent<Button>().onClick.Invoke();
 	}
+
     // we all gotta die some day
 	public static void KillPlayer (Player player){
 		Destroy (player.gameObject);
 		gm.SpawnPlayer (2); // breathing time.
 	}
+
     // die Die DIE
     public static void KillEnemy(Enemy enemy)
     {
         Destroy(enemy.gameObject);
     }
+
     // stop. pausing time.
     public void PauseGame()
     {
@@ -147,6 +155,7 @@ public class GameMaster : MonoBehaviour {
         UI.SetActive(false);
         Time.timeScale = 0;
     }
+
     // carry on, nothing to see here
     public void ResumeGame()
     {
@@ -156,11 +165,13 @@ public class GameMaster : MonoBehaviour {
         Time.timeScale = 1;
         StartCoroutine(Unpause(.01f));
     }
+
     // because human fingers are slow.
     IEnumerator Unpause(float delay){
         yield return delay;
         paused = false;
     }
+
     // crank it to 11!
     public void ChangeVolume(){
         masterVolume = volumeSlider.value;
@@ -170,10 +181,12 @@ public class GameMaster : MonoBehaviour {
         _soundsSource.volume = masterVolume;
         _soundsSource.Play();
     }
+
     // we're going places
     public void LoadNewScene(string _sceneName){
         StartCoroutine(LoadScene(_sceneName));
     }
+
     // now we're actually going places, I lied to you before.
     IEnumerator LoadScene(string _sceneName)
     {
@@ -198,6 +211,7 @@ public class GameMaster : MonoBehaviour {
         // back to life, back to reality
         gm.GetComponent<Fading>().BeginFade(-1);
     }
+
     // how do we know if we're there yet?
     bool SceneLoaded(string _sceneName)
     {

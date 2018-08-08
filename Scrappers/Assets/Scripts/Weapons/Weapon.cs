@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 	public int fireRate = 0;
     public int Damage = 10;
     public float Force = 5f;
-	public float Range = 15;
-	public float EffectSpawnRate = 10;
+	public float Range = 15f;
+	public float EffectSpawnRate = 10f;
     public float EffectVolume = 0.5f;
     public float FlareSize = 0.4f;
     public float CamShakeAmount = 0.1f;

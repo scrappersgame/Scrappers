@@ -9,6 +9,7 @@ using TMPro;
 public class StoryMaster : MonoBehaviour {
 
     public static StoryMaster sm;               // so we can call StoryMaster.sm from anywhere
+
     public Story story;                         // the ink story being told
 
     [SerializeField]
@@ -21,6 +22,7 @@ public class StoryMaster : MonoBehaviour {
     private Button buttonPrefab;                // choice button
     [SerializeField]
     private Canvas buttonCanvas;                // where the buttons go
+
     private bool nameGiven = false;             // have we given our name yet?
 
     private void Awake()
@@ -107,6 +109,7 @@ public class StoryMaster : MonoBehaviour {
 
         return choice;
     }
+
     void OnClickChoiceButton(int choice)
     {
         Debug.Log(choice);

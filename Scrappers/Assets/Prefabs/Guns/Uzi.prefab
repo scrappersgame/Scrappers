@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4215366657671974}
   - component: {fileID: 212177355661644352}
   - component: {fileID: 114188073961712018}
+  - component: {fileID: 60794819948842234}
   m_Layer: 8
   m_Name: Uzi
   m_TagString: Untagged
@@ -70,6 +71,45 @@ Transform:
   m_Father: {fileID: 4215366657671974}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &60794819948842234
+PolygonCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928231998632414}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.35757056, y: 0.2980097}
+    oldSize: {x: 1.4181818, y: 0.6}
+    newSize: {x: 0.5625, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.89485675, y: 0.26906535}
+      - {x: 0.79486436, y: 0.42423734}
+      - {x: -0.14270492, y: 0.34799558}
+      - {x: -0.50710005, y: 0.3484669}
+      - {x: -0.50710005, y: 0.02119418}
+      - {x: -0.48891822, y: 0.0030123624}
+      - {x: -0.20995423, y: 0.1753686}
+      - {x: -0.10710005, y: -0.17880581}
+      - {x: 0.1474454, y: -0.17880581}
+      - {x: 0.17087878, y: 0.01998717}
+      - {x: 0.29289994, y: -0.17880581}
+      - {x: 0.4565363, y: -0.17880581}
+      - {x: 0.47471812, y: -0.160624}
+      - {x: 0.4633818, y: 0.07133937}
+      - {x: 0.7474454, y: 0.11210327}
 --- !u!114 &114188073961712018
 MonoBehaviour:
   m_ObjectHideFlags: 1

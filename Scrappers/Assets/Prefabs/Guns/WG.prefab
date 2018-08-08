@@ -92,7 +92,7 @@ MonoBehaviour:
   CamShakeLength: 0.1
   Targets:
     serializedVersion: 2
-    m_Bits: 4294966523
+    m_Bits: 1043
   BulletTrailPrefab: {fileID: 4934359368815866, guid: 384987fde43474c7f9755e672894039c,
     type: 2}
   HitPrefab: {fileID: 4198187676200926, guid: 7ea9985eccf4b4da489c6c409ce6ada9, type: 2}
