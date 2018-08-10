@@ -19,6 +19,8 @@ public class StoryMaster : MonoBehaviour {
     [SerializeField]
     private TextMeshProUGUI speakerName;        // who's saying something
     [SerializeField]
+    private TMP_InputField textInput;               // input field
+    [SerializeField]
     private Button buttonPrefab;                // choice button
     [SerializeField]
     private Canvas buttonCanvas;                // where the buttons go
@@ -41,10 +43,14 @@ public class StoryMaster : MonoBehaviour {
 
     public void EnterName (string _name){
         // only called at the beginning of the game when we first give our name
-        story.variablesState["name"] = _name;
-        story.ChoosePathString("name_given");
-        nameGiven = true;
-        RefreshView();
+        if (_name.Length > 0)
+        {
+            textInput.gameObject.SetActive(false);
+            story.variablesState["name"] = _name;
+            story.ChoosePathString("name_given");
+            nameGiven = true;
+            RefreshView();
+        }
     }
 
     public void RefreshView()
