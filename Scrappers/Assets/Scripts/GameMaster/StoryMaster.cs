@@ -118,7 +118,6 @@ public class StoryMaster : MonoBehaviour {
 
     void OnClickChoiceButton(int choice)
     {
-        Debug.Log(choice);
         story.ChooseChoiceIndex(choice);
         RefreshView();
     }

@@ -1016,6 +1016,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stats:
+    maxScrap: 1000
+    currentScrap: 0
     maxHealth: 120
 --- !u!212 &212179946981820512
 SpriteRenderer:

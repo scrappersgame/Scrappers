@@ -1,8 +1,13 @@
 ﻿<Properties StartupConfiguration="{B07720C1-CF67-426E-71F4-D81D4B021D41}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMaster/StoryMaster.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Misc/StatusIndicator.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMaster/StoryMaster.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/Misc/Pickup.cs" Line="21" Column="44" />
+      <File FileName="Assets/Scripts/Player/Player.cs" Line="11" Column="35" />
+      <File FileName="Assets/Scripts/Misc/StatusIndicator.cs" Line="39" Column="35" />
+      <File FileName="Assets/Scripts/Enemies/Enemy.cs" Line="76" Column="1" />
+      <File FileName="Assets/Scripts/GameMaster/WaveSpawner.cs" Line="126" Column="129" />
+      <File FileName="Assets/Scripts/Enemies/EnemyAI.cs" Line="94" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

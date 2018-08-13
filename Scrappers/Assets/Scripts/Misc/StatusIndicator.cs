@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class StatusIndicator : MonoBehaviour {
     
@@ -7,6 +8,8 @@ public class StatusIndicator : MonoBehaviour {
     private RectTransform healthbarRect;
     [SerializeField]
     private Text healthbarText;
+    [SerializeField]
+    private TextMeshProUGUI scrapAmount;
     [SerializeField]
     private Gradient healthGradient;
     [SerializeField]
@@ -30,6 +33,11 @@ public class StatusIndicator : MonoBehaviour {
             healthbarRect.localScale = new Vector3(_value, healthbarRect.localScale.y, healthbarRect.localScale.z);
 
         healthbarText.text = _cur + "/" + _max + " HP";
+    }
+    public void SetScrap(int _cur, int _max)
+    {
+        float _value = (float)_cur / _max;
+        scrapAmount.SetText(_cur + "/" + _max);
     }
     private void Update()
     {

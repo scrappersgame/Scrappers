@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     public AudioClip hitSound;
     public AudioClip destroySound;
     public Transform destroyParticals;
-
+    public Transform[] itemDrops;
     [System.Serializable]
     public class EnemyStats
     {
@@ -69,6 +69,13 @@ public class Enemy : MonoBehaviour {
     {
         if (!shuttingDown)
         {
+            if (itemDrops.Length > 0){
+                int _maxDrops = itemDrops.Length;
+                int _numberDrops = Random.Range(0, _maxDrops);
+                for (int i = 0; i < _numberDrops; i++){
+                    Transform _droppedItem = Instantiate(itemDrops[Random.Range(0, _maxDrops)], transform.position, transform.rotation);
+                }
+            }
             if (destroyParticals != null)
             {
                 Transform particles = Instantiate(destroyParticals, transform.position, transform.rotation);
