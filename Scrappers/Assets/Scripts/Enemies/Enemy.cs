@@ -1,15 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
-    private Transform KillZone;
-    private bool shuttingDown = false;
     public AudioClip hitSound;
     public AudioClip destroySound;
     public Transform destroyParticals;
     public Transform[] itemDrops;
+    private Transform KillZone;
+    private bool shuttingDown = false;
+    private StatusIndicator statusIndicator;
+    private Transform target;
     [System.Serializable]
     public class EnemyStats
     {
@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour {
 
     [Header("Optional")]
     [SerializeField]
-    private StatusIndicator statusIndicator;
 
     public EnemyStats stats = new EnemyStats();
     void Awake()
@@ -69,11 +68,18 @@ public class Enemy : MonoBehaviour {
     {
         if (!shuttingDown)
         {
+            target = this.gameObject.GetComponent<EnemyAI>().target;
             if (itemDrops.Length > 0){
                 int _maxDrops = itemDrops.Length;
-                int _numberDrops = Random.Range(0, _maxDrops);
+                int _numberDrops = Random.Range(1, _maxDrops);
                 for (int i = 0; i < _numberDrops; i++){
                     Transform _droppedItem = Instantiate(itemDrops[Random.Range(0, _maxDrops)], transform.position, transform.rotation);
+                    Vector3 _rotDirection = Vector3.left;
+                    if( Random.Range(0, 2) == 1 )
+                        _rotDirection = Vector3.right;
+                    _droppedItem.Rotate(_rotDirection * Random.Range(1, 10));
+                    Vector3 _moveDirection = (transform.position - target.position).normalized * Random.Range(.1f, .5f);
+                    _droppedItem.gameObject.GetComponent<Rigidbody2D>().AddForce(_moveDirection, ForceMode2D.Impulse);
                 }
             }
             if (destroyParticals != null)
