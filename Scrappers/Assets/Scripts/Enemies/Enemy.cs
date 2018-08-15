@@ -78,8 +78,9 @@ public class Enemy : MonoBehaviour {
                     if( Random.Range(0, 2) == 1 )
                         _rotDirection = Vector3.right;
                     _droppedItem.Rotate(_rotDirection * Random.Range(1, 10));
-                    Vector3 _moveDirection = (transform.position - target.position).normalized * Random.Range(.1f, .5f);
+                    Vector3 _moveDirection = (transform.position - target.position).normalized * Random.Range(.1f, .7f);
                     _droppedItem.gameObject.GetComponent<Rigidbody2D>().AddForce(_moveDirection, ForceMode2D.Impulse);
+                    _droppedItem.gameObject.GetComponent<Rigidbody2D>().AddTorque(.7f);
                 }
             }
             if (destroyParticals != null)
