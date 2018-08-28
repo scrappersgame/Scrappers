@@ -17,6 +17,8 @@ TagManager:
   - GunHand
   - Sky
   - Music
+  - HotBar
+  - Scrapper
   layers:
   - Default
   - TransparentFX

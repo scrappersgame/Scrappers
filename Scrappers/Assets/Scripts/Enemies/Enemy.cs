@@ -5,10 +5,9 @@ public class Enemy : MonoBehaviour {
     public AudioClip hitSound;
     public AudioClip destroySound;
     public Transform destroyParticals;
+    public StatusIndicator statusIndicator;
     public Transform[] itemDrops;
-    private Transform KillZone;
     private bool shuttingDown = false;
-    private StatusIndicator statusIndicator;
     private Transform target;
     [System.Serializable]
     public class EnemyStats
@@ -30,10 +29,6 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
 
     public EnemyStats stats = new EnemyStats();
-    void Awake()
-    {
-        KillZone = GameObject.FindGameObjectWithTag("KZ").transform;
-    }
     private void Start()
     {
         stats.Init();
@@ -43,7 +38,7 @@ public class Enemy : MonoBehaviour {
     }
     void Update()
     {
-        if (transform.position.y <= KillZone.position.y)
+        if (transform.position.y <= -10f)
         {
             DamageEnemy(stats.currentHealth);
         }

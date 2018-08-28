@@ -26,6 +26,7 @@ public class StoryMaster : MonoBehaviour {
     private Canvas buttonCanvas;                // where the buttons go
 
     private bool nameGiven = false;             // have we given our name yet?
+    public bool gunGiven = false;
 
     private void Awake()
     {
@@ -51,6 +52,19 @@ public class StoryMaster : MonoBehaviour {
             nameGiven = true;
             RefreshView();
         }
+    }
+    public void GiveGun()
+    {
+        // only called when scrap >= 50
+        story.ChoosePathString("give_gun");
+        RefreshView();
+        gunGiven = true;
+    }
+    public void LeaveHouse()
+    {
+        // only called leaving house
+        story.ChoosePathString("leave_hut");
+        RefreshView();
     }
 
     public void RefreshView()

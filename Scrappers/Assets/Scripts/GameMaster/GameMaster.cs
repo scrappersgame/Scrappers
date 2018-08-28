@@ -119,6 +119,7 @@ public class GameMaster : MonoBehaviour {
     // Spawn player coroutine, coroutine necessary for delay in spawn
 	public IEnumerator SpawnPlayerRoutine (int spawnDelay){
 		yield return new WaitForSeconds (spawnDelay); //how long to wait before spawn
+        CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = spawnPoint.transform;
         // getting position/rotation from spawnpoint object
 		Vector3 spawnPosition = spawnPoint.transform.position;
 		Quaternion spawnRotation = spawnPoint.transform.rotation;
@@ -132,8 +133,34 @@ public class GameMaster : MonoBehaviour {
         // tell the camera who to follow
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
         // activate first item in hotbar
-        slot1.GetComponent<Button>().onClick.Invoke();
-	}
+        playerObj.GetComponent<Player>().RemoveScrap(50);
+    }
+    // Spawn method to call the Spawn coroutine because you can't call a subroutine from another script
+    public void SpawnItem(GameObject _spawnItem, int spawnDelay){
+        gm.StartCoroutine(gm.SpawnItemRoutine (_spawnItem, spawnDelay));
+    }
+
+    // Spawn item coroutine, coroutine necessary for delay in spawn
+    public IEnumerator SpawnItemRoutine (GameObject _spawnItem, int spawnDelay){
+        Transform prevFollow = CamController.GetComponent<CinemachineVirtualCamera>().m_Follow;
+        CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = spawnPoint.transform;
+        yield return new WaitForSeconds (spawnDelay); //how long to wait before spawn
+        // getting position/rotation from spawnpoint object
+        Vector3 spawnPosition = new Vector3 (spawnPoint.transform.position.x, spawnPoint.transform.position.y + 1, spawnPoint.transform.position.z);
+        Quaternion spawnRotation = spawnPoint.transform.rotation;
+        // cool sounds bro
+        AudioSource.PlayClipAtPoint(spawnClip, spawnPosition, masterVolume);
+        // creating the player
+        Instantiate (_spawnItem.transform, spawnPosition, spawnRotation);
+
+        // cool effects bro
+        Transform spawnParticleObj = Instantiate (spawnPrefab, spawnPosition, spawnRotation);
+        Destroy (spawnParticleObj.gameObject, 3);
+        // tell the camera who to follow
+        yield return new WaitForSeconds(spawnDelay); //how long to wait before spawn
+        CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = prevFollow;
+        // activate first item in hotbar
+    }
 
     // we all gotta die some day
 	public static void KillPlayer (Player player){

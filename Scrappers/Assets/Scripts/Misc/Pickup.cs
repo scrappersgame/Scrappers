@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour {
     public int ScrapValue = 1;
     public float speed = 10f;
     public ForceMode2D fMode;
+    public GameObject itemPrefab;
     private Transform target;
     private Rigidbody2D rb;
 
@@ -26,15 +27,18 @@ public class Pickup : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            coll.gameObject.GetComponent<Player>().AddScrap(ScrapValue);
+            Player _player = coll.gameObject.GetComponent<Player>();
+            _player.AddScrap(ScrapValue);
+            if (itemPrefab != null){
+                _player.AddItem(itemPrefab);
+            }
             Destroy(gameObject);
         }
     }
     void FixedUpdate(){
         if(target != null){
-            Debug.Log("Moving...");
             Vector3 dir = (target.position - transform.position).normalized;
-            dir *= 10f * Time.fixedDeltaTime;
+            dir *= 100f * Time.fixedDeltaTime * rb.mass;
 
             //move the item
             rb.AddForce(dir, fMode);

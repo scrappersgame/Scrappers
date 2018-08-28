@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio for Mac
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrappers", "Assembly-CSharp.csproj", "{B07720C1-CF67-426E-71F4-D81D4B021D41}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{B07720C1-CF67-426E-71F4-D81D4B021D41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrappers", "Assembly-CSharp-firstpass.csproj", "{5D6A4970-EE73-3BF5-ED93-AE7557E6F991}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{5D6A4970-EE73-3BF5-ED93-AE7557E6F991}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrappers", "Assembly-CSharp-Editor.csproj", "{76F2E0CB-9662-C7F6-9A31-76DBE9FE5B0C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{76F2E0CB-9662-C7F6-9A31-76DBE9FE5B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scrappers", "Assembly-CSharp-Editor-firstpass.csproj", "{AF9CB702-C90C-8A54-B440-7F0DF6E3254D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{AF9CB702-C90C-8A54-B440-7F0DF6E3254D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

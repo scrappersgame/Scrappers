@@ -500,7 +500,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbarRect: {fileID: 224050278775545454}
   healthbarText: {fileID: 114008647560839756}
-  scrapAmount: {fileID: 0}
   healthGradient:
     serializedVersion: 2
     key0: {r: 1, g: 0.031427406, b: 0, a: 1}
@@ -512,7 +511,7 @@ MonoBehaviour:
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
-    ctime1: 33153
+    ctime1: 40478
     ctime2: 65535
     ctime3: 0
     ctime4: 0
@@ -561,13 +560,13 @@ MonoBehaviour:
   destroySound: {fileID: 8300000, guid: 99a7644bcd38e47b49818763ea77d527, type: 3}
   destroyParticals: {fileID: 4909357233208428, guid: d092012ff86464a0ebe981a752887e80,
     type: 2}
+  statusIndicator: {fileID: 114364003889118104}
   itemDrops:
   - {fileID: 4956962795017434, guid: edf61912421ff4588ac11018599f3318, type: 2}
   - {fileID: 4105546661520632, guid: 06c1ce941904248cfa33126b3449c6e5, type: 2}
   - {fileID: 4591002198355922, guid: def7eb25792574dfc8688de76568f348, type: 2}
   - {fileID: 4763446726104016, guid: 446189f3ee2794a9bb40e9c5bf85b074, type: 2}
   - {fileID: 4379082565700116, guid: 1a98a726ed8a24f69b73fef39ee967ef, type: 2}
-  statusIndicator: {fileID: 114364003889118104}
   stats:
     maxHealth: 100
 --- !u!114 &114631352215147322

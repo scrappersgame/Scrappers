@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 using TMPro;
 
-public class StatusIndicator : MonoBehaviour {
+public class PlayerStatus : MonoBehaviour {
     
     [SerializeField]
     private RectTransform healthbarRect;
@@ -12,6 +12,10 @@ public class StatusIndicator : MonoBehaviour {
     private TextMeshProUGUI scrapAmount;
     [SerializeField]
     private Gradient healthGradient;
+    [SerializeField]
+    private Canvas LogCanvas;
+    [SerializeField]
+    private TextMeshProUGUI TextPrefab;
     [SerializeField]
     private bool barResizes;
 
@@ -36,8 +40,16 @@ public class StatusIndicator : MonoBehaviour {
     }
     public void SetScrap(int _cur, int _max)
     {
-        float _value = (float)_cur / _max;
-        scrapAmount.SetText(_cur + "/" + _max);
+        if(scrapAmount != null)
+           scrapAmount.SetText(_cur + "/" + _max);
+    }
+    public void LogText(string _text)
+    {
+        if (LogCanvas != null){
+            TextMeshProUGUI logLine = Instantiate(TextPrefab) as TextMeshProUGUI;
+            logLine.transform.SetParent(LogCanvas.transform, false);
+            logLine.text = _text;
+        }
     }
     private void Update()
     {

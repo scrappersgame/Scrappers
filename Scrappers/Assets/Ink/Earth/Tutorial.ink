@@ -33,14 +33,13 @@ Hal: Now let’s get you out there scrappin’ so you can start payin’ off sum
 * Alright, lets go.
     ->END
 
-=== Leave_Hut
+=== leave_hut
 // start dialog after leaving hut.
-Hal: Welp, looks like mosta the smaller bits have already been scrapped up by the rest of the vultures around here. Looks like yur gonna have to blast some stuff. Here, take this pea shooter, it'll take a while, but it'll get the job done.
+Hal: Welp, looks like mosta the smaller bits have already been scrapped up by others. Looks like you got your work cut out for ya, kid. See if you can find something you can use to whack somethin with, and we’ll go from there.
 
-TODO Spawn in gun
 ->END
 
-=== Scrapped_Something
-TODO Spawn in gun
+=== give_gun
+Hal: Sure are workin up a sweat swinging that pipe around. Head back to yur hut and you'll find something in your body scrapper that should make the going a mite bit quicker.
 
 ->END

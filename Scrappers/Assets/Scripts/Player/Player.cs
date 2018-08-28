@@ -4,76 +4,84 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    public GameObject pistolPrefab;
+    public StatusIndicator ScrapStatus;
 
-
-	[System.Serializable]
-	public class PlayerStats {
-        public int maxScrap = 1000;
-        public int currentScrap = 0;
-
-        public int maxHealth = 100;
-        private int _curHealth;
-        public int currentHealth
-        {
-            get { return _curHealth; }
-            set { _curHealth = Mathf.Clamp(value, 0, maxHealth); }
-        }
-
-        public void Init()
-        {
-            currentHealth = maxHealth;
-        }
-	}
-    public PlayerStats stats = new PlayerStats();
-
-    private StatusIndicator statusIndicator;
-    private Transform KillZone;
+    private PlayerStatus playerStatus;
+    private ItemController itemController;
     private Transform gunHand;
-    private GameObject currentGun;
+    private GameObject currentItem;
 
-	void Awake (){
-        statusIndicator = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<StatusIndicator>();
-
-	}
+    void Awake()
+    {
+        playerStatus = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<PlayerStatus>();
+        itemController = GameObject.FindGameObjectWithTag("HotBar").GetComponent<ItemController>();
+    }
     private void Start()
     {
-        stats.Init();
-        if (statusIndicator != null)
+        PlayerMaster.stats.Init();
+        if (playerStatus != null)
         {
-            statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
+            playerStatus.SetHealth(PlayerMaster.stats.currentHealth, PlayerMaster.stats.maxHealth);
+        }
+        if (ScrapStatus != null)
+        {
+            ScrapStatus.SetHealth(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
         }
     }
     void Update () {
-        if (KillZone == null)
-            KillZone = GameObject.FindGameObjectWithTag("KZ").transform;
-		if (transform.position.y <= KillZone.position.y){
-            DamagePlayer (stats.currentHealth);
+		if (transform.position.y <= -10f){
+            DamagePlayer (PlayerMaster.stats.currentHealth);
         }
     }
 	public void DamagePlayer (int damage) {
-        stats.currentHealth -= damage;
-        if (stats.currentHealth <= 0){
+        PlayerMaster.stats.currentHealth -= damage;
+        if (PlayerMaster.stats.currentHealth <= 0){
 			GameMaster.KillPlayer(this);
 		}
-        if (statusIndicator != null)
+        if (playerStatus != null)
         {
-            statusIndicator.SetHealth(stats.currentHealth, stats.maxHealth);
+            playerStatus.SetHealth(PlayerMaster.stats.currentHealth, PlayerMaster.stats.maxHealth);
         }
 	}
-    public void SwitchGuns (GameObject _gunPrefab){
+    public void SwitchItems (GameObject _item){
         if (gunHand == null)
             gunHand = GameObject.FindGameObjectWithTag("GunHand").transform;
-        if (currentGun != null)
-            Destroy(currentGun);
-        GameObject _newGun = Instantiate(_gunPrefab, gunHand.position, gunHand.rotation);
-        _newGun.transform.SetParent(gunHand.parent);
-        _newGun.transform.localScale = _newGun.transform.parent.localScale;
-        currentGun = _newGun;
+        if (currentItem != null)
+            Destroy(currentItem);
+        GameObject _newItem = Instantiate(_item, gunHand.position, gunHand.rotation);
+        _newItem.transform.SetParent(gunHand.parent);
+        _newItem.transform.localScale = _newItem.transform.parent.localScale;
+        currentItem = _newItem;
         
     }
-    public void AddScrap(int value){
-        stats.currentScrap += value;
-        statusIndicator.SetScrap(stats.currentScrap, stats.maxScrap);
-
+    public void RemoveScrap(int value)
+    {
+        PlayerMaster.stats.currentScrap -= value;
+        playerStatus.SetScrap(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
+        if(PlayerMaster.stats.currentScrap > 0)
+            ScrapStatus.SetHealth(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
+    }
+    public void AddScrap(int value)
+    {
+        PlayerMaster.stats.currentScrap += value;
+        if (PlayerMaster.stats.currentScrap > PlayerMaster.stats.maxScrap)
+        {
+            int scrapWasted = PlayerMaster.stats.currentScrap - PlayerMaster.stats.maxScrap;
+            playerStatus.LogText("Scrapper full, " + scrapWasted + " scrap lost.");
+            PlayerMaster.stats.currentScrap = PlayerMaster.stats.maxScrap;
+        }
+        if (PlayerMaster.stats.currentScrap > 0)
+            ScrapStatus.SetHealth(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
+        playerStatus.SetScrap(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
+        if (PlayerMaster.stats.currentScrap >= 50 && !StoryMaster.sm.gunGiven){
+            GameMaster.gm.SpawnItem(pistolPrefab, 1);
+            StoryMaster.sm.GiveGun();
+            RemoveScrap(50);
+        }
+    }
+    public void AddItem(GameObject _item){
+        playerStatus.LogText(_item.name + " blueprint added");
+        itemController.AddItem(_item);
     }
 }
