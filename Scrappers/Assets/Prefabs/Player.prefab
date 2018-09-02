@@ -1152,6 +1152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RotationOffset: 0
+  swingSound: {fileID: 8300000, guid: 15c56ef72bf3042c18fcf28217a02086, type: 3}
 --- !u!114 &114684124564007468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1209,10 +1210,6 @@ MonoBehaviour:
   pistolPrefab: {fileID: 1556135217362124, guid: 381591698a11e4301a7be0ecf93f7c6d,
     type: 2}
   ScrapStatus: {fileID: 114684124564007468}
-  stats:
-    maxScrap: 1000
-    currentScrap: 0
-    maxHealth: 120
 --- !u!114 &114935926952564512
 MonoBehaviour:
   m_ObjectHideFlags: 1

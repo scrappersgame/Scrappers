@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMaster : MonoBehaviour {
 
     [System.Serializable]
     public class PlayerStats
     {
-        public int maxScrap = 1000;
+        public int maxScrap = 100;
         public int currentScrap = 0;
 
         public int maxHealth = 100;

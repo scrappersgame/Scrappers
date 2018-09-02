@@ -29,8 +29,9 @@ public class Pickup : MonoBehaviour {
         {
             Player _player = coll.gameObject.GetComponent<Player>();
             _player.AddScrap(ScrapValue);
-            if (itemPrefab != null){
-                _player.AddItem(itemPrefab);
+            if (itemPrefab != null)
+            {
+                _player.AddItem(itemPrefab, this.gameObject);
             }
             Destroy(gameObject);
         }

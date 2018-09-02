@@ -190,6 +190,7 @@
     <Compile Include="Assets\Scripts\Misc\IntroMovement.cs" />
     <Compile Include="Assets\Scripts\Misc\LeaveHouse.cs" />
     <Compile Include="Assets\Scripts\Misc\Pickup.cs" />
+    <Compile Include="Assets\Scripts\Misc\ScrapperPickup.cs" />
     <Compile Include="Assets\Scripts\Misc\Tiling.cs" />
     <Compile Include="Assets\Scripts\Misc\Twinkle.cs" />
     <Compile Include="Assets\Scripts\Player\ArmRotation.cs" />
@@ -242,6 +243,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\Audio\Sound Effects\RPG Sound Pack\license.txt" />
     <None Include="Assets\Audio\Sound Effects\drone license.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />

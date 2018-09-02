@@ -55,8 +55,11 @@ public class EnemyAI : MonoBehaviour {
     {
         GameObject searchResult = GameObject.FindGameObjectWithTag("Player");
         if (searchResult == null){
-            yield return new WaitForSeconds(updateRate);
-            StartCoroutine(SearchForPlayer());
+            GameObject emptyObj = new GameObject("Cool GameObject made from Code");
+            emptyObj.transform.position = new Vector3(transform.position.x + Random.Range(-5f, 5f), transform.position.y + Random.Range(-5f, 5f), transform.position.z);
+            target = emptyObj.transform;
+            yield return new WaitForSeconds(5f);
+            Destroy(emptyObj);
         }else{
             searchingForPlayer = false;
             target = searchResult.transform;

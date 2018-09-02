@@ -130,9 +130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrapValue: 0
-  speed: 10
+  speed: 100
   fMode: 1
   itemPrefab: {fileID: 1639532615350988, guid: ad48542c26b724659bc4b3a633a5ec8d, type: 2}
+  pickupPrefab: {fileID: 1084755570683922}
 --- !u!212 &212527129381896998
 SpriteRenderer:
   m_ObjectHideFlags: 1

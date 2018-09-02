@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60853220814840268}
   - component: {fileID: 114961599054363682}
   - component: {fileID: 50304825348962446}
+  - component: {fileID: 58371827000597588}
   m_Layer: 8
   m_Name: Pistol_pickup
   m_TagString: Untagged
@@ -63,6 +64,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58371827000597588
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1556135217362124}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.31208873, y: 0.34404963}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!60 &60853220814840268
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -133,6 +149,7 @@ MonoBehaviour:
   speed: 100
   fMode: 1
   itemPrefab: {fileID: 1928231998632414, guid: f898010c24dbe44fc88ebef1ae1f12dc, type: 2}
+  pickupPrefab: {fileID: 1556135217362124}
 --- !u!212 &212358732123980938
 SpriteRenderer:
   m_ObjectHideFlags: 1

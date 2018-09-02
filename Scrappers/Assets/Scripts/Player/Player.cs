@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
         }
         if (ScrapStatus != null)
         {
-            ScrapStatus.SetHealth(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
+            ScrapStatus.SetHealth(Mathf.Clamp(PlayerMaster.stats.currentScrap, 0, PlayerMaster.stats.maxScrap), PlayerMaster.stats.maxScrap);
         }
     }
     void Update () {
@@ -80,8 +80,8 @@ public class Player : MonoBehaviour {
             RemoveScrap(50);
         }
     }
-    public void AddItem(GameObject _item){
+    public void AddItem(GameObject _item, GameObject _pickup){
         playerStatus.LogText(_item.name + " blueprint added");
-        itemController.AddItem(_item);
+        itemController.AddItem(_item, _pickup);
     }
 }

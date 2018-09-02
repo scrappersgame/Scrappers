@@ -19,7 +19,9 @@ public class GameMaster : MonoBehaviour {
     public PolygonCollider2D mainSkyBox;            // the box that defines the sky.
     [Header("Prefabs")]
     public Transform playerPrefab;                  // your dude.
+    public Transform scrapperPrefab;                // your dude's scrapper.
     public Transform spawnPrefab;                   // the particles that surround your dude when you (re)spawn.
+    public Transform deathPrefab;                   // the particles that surround your dude when you die.
     public AudioClip spawnClip;                     // the sound your dude makes when you (re)spawn.
     [Header("Variables")]
     public bool gameStarted = false;                // has the game started yet?
@@ -164,7 +166,21 @@ public class GameMaster : MonoBehaviour {
 
     // we all gotta die some day
 	public static void KillPlayer (Player player){
-		Destroy (player.gameObject);
+        // Where did I die?
+        Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
+        Quaternion playerRotation = player.transform.rotation;
+        // creating the scrapper
+        Transform scrapperObj = Instantiate(gm.scrapperPrefab, playerPosition, playerRotation);
+        // camera follows scrapper
+        gm.CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = scrapperObj;
+        // setting scrap value of scrapper
+        scrapperObj.GetComponent<Pickup>().ScrapValue = Mathf.Clamp(PlayerMaster.stats.currentScrap + 50, 20, PlayerMaster.stats.maxScrap);
+        scrapperObj.GetComponent<ScrapperPickup>().maxScrap = PlayerMaster.stats.maxScrap;
+        player.RemoveScrap(PlayerMaster.stats.currentScrap);
+        // creating the death particles
+        Transform deathParticleObj = Instantiate(gm.deathPrefab, player.transform.position, player.transform.rotation);
+        Destroy(deathParticleObj.gameObject, 3);
+        Destroy(player.gameObject);
 		gm.SpawnPlayer (2); // breathing time.
 	}
 

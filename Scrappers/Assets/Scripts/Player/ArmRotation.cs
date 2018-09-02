@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class ArmRotation : MonoBehaviour {
 	public int RotationOffset = 0;
+    public AudioClip swingSound;
     private Quaternion UpRotation;
     private Quaternion DownRotation;
     private Quaternion OriginalRotation;
     private bool Swinging = false;
+    private bool soundPlayed = false;
     private float xDifference;
     private float SwingStartTime;
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         if (Time.timeScale > 0)
         {
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -30,17 +33,25 @@ public class ArmRotation : MonoBehaviour {
                 }
                 else if (Time.time < SwingStartTime + .2f)
                 {
+                    if (!soundPlayed)
+                    {
+                        float masterVolume = GameMaster.gm.masterVolume;
+                        AudioSource.PlayClipAtPoint(swingSound, transform.position, masterVolume);
+                        soundPlayed = true;
+                    }
                     transform.rotation = Quaternion.Slerp(transform.rotation, DownRotation, .7f);
                 }
-                else if (Time.time < SwingStartTime + .25f)
+                else if (Time.time < SwingStartTime + .3f)
                 {
                     transform.rotation = Quaternion.Slerp(transform.rotation, OriginalRotation, .7f);
                 }
                 else
                 {
                     Swinging = false;
+                    soundPlayed = false;
                 }
-            }else{
+            }
+            else{
         		// caculate difference between the mouse and the arm
         		Vector3 difference = mouseWorldPosition - transform.position;
         		difference.Normalize (); // make sure the difference points add up to 1
@@ -54,8 +65,8 @@ public class ArmRotation : MonoBehaviour {
         if (!Swinging)
         {
             OriginalRotation = transform.rotation;
-            UpRotation = transform.rotation * Quaternion.Euler(0, 0, 45 * Mathf.Sign(xDifference));
-            DownRotation = transform.rotation * Quaternion.Euler(0, 0, -45 * Mathf.Sign(xDifference));
+            UpRotation = transform.rotation * Quaternion.Euler(0, 0, 65 * Mathf.Sign(xDifference));
+            DownRotation = transform.rotation * Quaternion.Euler(0, 0, -65 * Mathf.Sign(xDifference));
             SwingStartTime = Time.time;
             Swinging = true;
         }

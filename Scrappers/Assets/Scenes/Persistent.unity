@@ -3456,6 +3456,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 114780073203870890, guid: db67672fc4d62477d8ac0b26a45b1896,
     type: 2}
   buttonCanvas: {fileID: 1377060149}
+  gunGiven: 0
 --- !u!4 &824939778
 Transform:
   m_ObjectHideFlags: 0
@@ -3498,7 +3499,11 @@ MonoBehaviour:
   mainSkyBox: {fileID: 416686361}
   playerPrefab: {fileID: 4529419452262588, guid: bd941682aca3641938fce71ec670f40b,
     type: 2}
+  scrapperPrefab: {fileID: 4119855811370262, guid: 1dbc1b62470ca411f8c1520b579fd6f6,
+    type: 2}
   spawnPrefab: {fileID: 4207586478154314, guid: f9a4d27a41d774085a997d4f23252245,
+    type: 2}
+  deathPrefab: {fileID: 4772783546916742, guid: fc6010303f03a4d0ea172ebfbc33e851,
     type: 2}
   spawnClip: {fileID: 8300000, guid: afa2175162cf5478ebd6db566c613850, type: 3}
   gameStarted: 0
@@ -5509,13 +5514,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a22aff303f1ec444487e0a5fd1ac9dec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item1: {fileID: 0}
-  Item2: {fileID: 0}
-  Item3: {fileID: 0}
+  items:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   slots:
   - {fileID: 468433299}
   - {fileID: 1048475694}
   - {fileID: 565654710}
+  pickups:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1214360580
 GameObject:
   m_ObjectHideFlags: 3
