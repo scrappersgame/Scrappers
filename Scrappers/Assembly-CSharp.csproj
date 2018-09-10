@@ -200,6 +200,7 @@
     <Compile Include="Assets\Scripts\Saving\SaveLoad.cs" />
     <Compile Include="Assets\Scripts\UI\FadingText.cs" />
     <Compile Include="Assets\Scripts\UI\ItemController.cs" />
+    <Compile Include="Assets\Scripts\UI\LogController.cs" />
     <Compile Include="Assets\Scripts\UI\MainMenu.cs" />
     <Compile Include="Assets\Scripts\UI\OptionsBack.cs" />
     <Compile Include="Assets\Scripts\UI\PauseMenu.cs" />

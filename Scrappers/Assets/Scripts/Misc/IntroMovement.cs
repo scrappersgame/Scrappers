@@ -3,19 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class IntroMovement : MonoBehaviour {
+    public AudioClip shipClip;
     public AudioClip spaceClip;
     public float moveSpeed = 4f;                    // how fast are we going?
     private Vector3 startPoint;                     // where did we start?
     private AudioSourceCrossfade _musicSource;      // where is that music coming from?
+    private bool shipPlayed = false;                // has the music changed?
     private bool spacePlayed = false;               // has the music changed?
-	void Awake(){
+    void Awake(){
         // where we started
         startPoint = transform.position;
         _musicSource = GameObject.FindGameObjectWithTag("Music").GetComponent<AudioSourceCrossfade>();
     }
     void Update(){
         Vector3 curPos = transform.position;
-        if(curPos.y >= 23 && !spacePlayed){ 
+        if (curPos.y >= 23 && !shipPlayed)
+        {
+            // Lets change the track...
+            if (shipClip != null)
+            {
+                _musicSource.volume = GameMaster.gm.masterVolume;
+                _musicSource.Play(shipClip);
+            }
+            shipPlayed = true;
+        }
+        if (curPos.y >= 120 && !spacePlayed)
+        {
             // Lets change the track...
             if (spaceClip != null)
             {
