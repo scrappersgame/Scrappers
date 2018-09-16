@@ -241,11 +241,8 @@
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.ParticlesLegacyModule.xml
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/Unity.IvyParser.dll.mdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.dll
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.pdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.WebGLModule.dll
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll.mdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.xml
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csproj.CopyComplete

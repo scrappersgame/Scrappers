@@ -13,7 +13,7 @@ public class LogController : MonoBehaviour {
             {
                 if(i > 9){
                     Transform child = transform.GetChild(i);
-                    Destroy(child);
+                    Destroy(child.gameObject);
                 }
             }
 

@@ -3,6 +3,7 @@
 public class Weapon : MonoBehaviour {
 	public int fireRate = 0;
     public int Damage = 10;
+    public int BulletCost = 1;
     public float Force = 5f;
 	public float Range = 15f;
 	public float EffectSpawnRate = 10f;
@@ -16,7 +17,8 @@ public class Weapon : MonoBehaviour {
 	public Transform MuzzleFlashPrefab;
 	public Color TrailColor;
     public AudioClip gunShot;
-	private Vector2 firePointPosition;
+    public AudioClip gunClick;
+    private Vector2 firePointPosition;
     private Gradient gradient;
     private AudioSource sounds;
 
@@ -34,8 +36,7 @@ public class Weapon : MonoBehaviour {
 			Debug.LogError("Your gun doesn't have a muzzle.");
 		}
 		gradient = new Gradient();
-
-	}
+    }
 
     private void Start()
     {
@@ -62,61 +63,74 @@ public class Weapon : MonoBehaviour {
                     Shoot();
                 }
             }
+
         }
 	}
 
 	void Shoot () {
-        float masterVolume = GameMaster.gm.masterVolume;
-        sounds.clip = gunShot;
-        sounds.volume = EffectVolume * masterVolume;
-        sounds.loop = false;
-        sounds.Play();
-		firePointPosition = new Vector2 (firePoint.position.x, firePoint.position.y);
-        int RotationOffset = 0;
-            Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        float xDifference = mouseWorldPosition.x - transform.parent.parent.position.x;
-            if (xDifference < 0)
-            {
-                RotationOffset = 180;
-            }            
-        float degrees = firePoint.rotation.eulerAngles.z + RotationOffset;
-        float radians = degrees * Mathf.Deg2Rad;
-        float x = Mathf.Cos(radians);
-        float y = Mathf.Sin(radians);
-        Vector3 hitAngle = new Vector3(x, y, 0);
-        Vector2 hitPoint = firePoint.position + hitAngle * Range;
-        Vector3 hitNormal = new Vector3(999,999,999);
-        RaycastHit2D hit = Physics2D.Raycast (firePointPosition, hitPoint - firePointPosition, Range, Targets);
-		if (Time.time >= timeToSpawnEffect){
-            if (hit.collider != null)
-            {
-                float hitPointDist = (firePointPosition - hit.point).magnitude;
-                hitPoint = firePoint.position + hitAngle * hitPointDist;
-                hitNormal = hit.normal;
-            }
-            Effect (hitPoint, RotationOffset, hitNormal);
-			timeToSpawnEffect = Time.time + 1/EffectSpawnRate;
-		}
-		if (hit.collider != null){
-            Enemy enemy = hit.collider.GetComponent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.DamageEnemy(Damage); //Damage enemy
-                //create sound at hitpoint
-                AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
-            }
-            else if (hit.transform.parent != null)
-            {
-                enemy = hit.transform.parent.GetComponent<Enemy>();
+        if (PlayerMaster.stats.currentScrap > 0)
+        {
+            GameMaster.gm.playerObj.GetComponent<Player>().RemoveScrap(BulletCost);
+            float masterVolume = GameMaster.gm.masterVolume;
+            sounds.clip = gunShot;
+            sounds.volume = EffectVolume * masterVolume;
+            sounds.loop = false;
+            sounds.Play();
+    		firePointPosition = new Vector2 (firePoint.position.x, firePoint.position.y);
+            int RotationOffset = 0;
+                Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            float xDifference = mouseWorldPosition.x - transform.parent.parent.position.x;
+                if (xDifference < 0)
+                {
+                    RotationOffset = 180;
+                }            
+            float degrees = firePoint.rotation.eulerAngles.z + RotationOffset;
+            float radians = degrees * Mathf.Deg2Rad;
+            float x = Mathf.Cos(radians);
+            float y = Mathf.Sin(radians);
+            Vector3 hitAngle = new Vector3(x, y, 0);
+            Vector2 hitPoint = firePoint.position + hitAngle * Range;
+            Vector3 hitNormal = new Vector3(999,999,999);
+            RaycastHit2D hit = Physics2D.Raycast (firePointPosition, hitPoint - firePointPosition, Range, Targets);
+    		if (Time.time >= timeToSpawnEffect){
+                if (hit.collider != null)
+                {
+                    float hitPointDist = (firePointPosition - hit.point).magnitude;
+                    hitPoint = firePoint.position + hitAngle * hitPointDist;
+                    hitNormal = hit.normal;
+                }
+                Effect (hitPoint, RotationOffset, hitNormal);
+    			timeToSpawnEffect = Time.time + 1/EffectSpawnRate;
+    		}
+    		if (hit.collider != null){
+                Enemy enemy = hit.collider.GetComponent<Enemy>();
                 if (enemy != null)
                 {
                     enemy.DamageEnemy(Damage); //Damage enemy
-                                               //create sound at hitpoint
+                    //create sound at hitpoint
                     AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
                 }
-            }
-		}
-	}
+                else if (hit.transform.parent != null)
+                {
+                    enemy = hit.transform.parent.GetComponent<Enemy>();
+                    if (enemy != null)
+                    {
+                        enemy.DamageEnemy(Damage); //Damage enemy
+                                                   //create sound at hitpoint
+                        AudioSource.PlayClipAtPoint(enemy.hitSound, hit.collider.transform.position, masterVolume);
+                    }
+                }
+    		}
+        }
+        else
+        {
+            float masterVolume = GameMaster.gm.masterVolume;
+            sounds.clip = gunClick;
+            sounds.volume = EffectVolume * masterVolume;
+            sounds.loop = false;
+            sounds.Play();
+        }
+    }
 
     void Effect (Vector2 hitPoint, int RotationOffset, Vector3 hitNormal){
         //setting bullet colors

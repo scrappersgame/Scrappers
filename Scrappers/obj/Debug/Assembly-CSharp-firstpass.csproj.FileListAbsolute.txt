@@ -240,11 +240,8 @@
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.ParticlesLegacyModule.xml
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/Unity.IvyParser.dll.mdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.csproj.CoreCompileInputs.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.dll
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.pdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.WebGLModule.dll
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.dll.mdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEngine.SpatialTrackingModule.xml
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.csprojAssemblyReference.cache
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-firstpass.csproj.CopyComplete

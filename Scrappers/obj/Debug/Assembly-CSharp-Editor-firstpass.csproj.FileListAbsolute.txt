@@ -304,7 +304,8 @@
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/Unity.IvyParser.dll.mdb
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
-/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.CoreCompileInputs.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.dll
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.pdb
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache
+/Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp-Editor-firstpass.csproj.CopyComplete

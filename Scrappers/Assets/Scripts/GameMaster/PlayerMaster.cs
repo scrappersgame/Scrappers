@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class PlayerMaster : MonoBehaviour {
-
+public class PlayerMaster : MonoBehaviour
+{
     [System.Serializable]
     public class PlayerStats
     {

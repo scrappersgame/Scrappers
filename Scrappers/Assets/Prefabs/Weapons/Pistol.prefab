@@ -156,6 +156,7 @@ MonoBehaviour:
     type: 2}
   TrailColor: {r: 1, g: 0.39215687, b: 0, a: 1}
   gunShot: {fileID: 8300000, guid: d7fd13de98b374dacb7cfba35829361f, type: 3}
+  gunClick: {fileID: 8300000, guid: f49c1c95c08cb474983a0f5d33635141, type: 3}
 --- !u!212 &212177355661644352
 SpriteRenderer:
   m_ObjectHideFlags: 1

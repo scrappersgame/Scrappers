@@ -3506,6 +3506,7 @@ MonoBehaviour:
   pauseBG: {fileID: 1234215231}
   UI: {fileID: 1787101978}
   slot1: {fileID: 868105566}
+  playerObj: {fileID: 0}
   volumeSlider: {fileID: 190143730}
   introMusic: {fileID: 8300000, guid: c2ce61e192d4749e5a639cf7c8516796, type: 3}
   mainSkyBox: {fileID: 416686361}

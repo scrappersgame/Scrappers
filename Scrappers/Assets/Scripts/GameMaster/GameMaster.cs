@@ -14,6 +14,7 @@ public class GameMaster : MonoBehaviour {
     public GameObject pauseBG;                      // the thing that makes it easier to read the pause text.
     public GameObject UI;                           // the thing that tells you what's up with your dude.
     public GameObject slot1;                        // the first thing in your hotbar.
+    public GameObject playerObj;
     public Slider volumeSlider;                     // the thing that controls the volume.
     public AudioClip introMusic;                    // the music that plays at the start of the game.
     public PolygonCollider2D mainSkyBox;            // the box that defines the sky.
@@ -128,12 +129,12 @@ public class GameMaster : MonoBehaviour {
         // cool sounds bro
         AudioSource.PlayClipAtPoint(spawnClip, spawnPosition, masterVolume);
         // creating the player
-		Transform playerObj = Instantiate (playerPrefab, spawnPosition, spawnRotation);
+        playerObj = Instantiate (playerPrefab, spawnPosition, spawnRotation).gameObject;
         // cool effects bro
 		Transform spawnObj = Instantiate (spawnPrefab, spawnPosition, spawnRotation);
 		Destroy (spawnObj.gameObject, 3);
         // tell the camera who to follow
-		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj;
+		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj.transform;
         // activate first item in hotbar
         playerObj.GetComponent<Player>().RemoveScrap(50);
     }
