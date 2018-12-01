@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 10
-  Damage: 10
+  Damage: 20
+  BulletCost: 1
   Force: 100
   Range: 20
   EffectSpawnRate: 10
@@ -140,6 +141,7 @@ MonoBehaviour:
     type: 2}
   TrailColor: {r: 0.078431375, g: 0.6392157, b: 1, a: 1}
   gunShot: {fileID: 8300000, guid: 64bfd016507a445e392cb4ab9de2b5aa, type: 3}
+  gunClick: {fileID: 0}
 --- !u!212 &212177355661644352
 SpriteRenderer:
   m_ObjectHideFlags: 1

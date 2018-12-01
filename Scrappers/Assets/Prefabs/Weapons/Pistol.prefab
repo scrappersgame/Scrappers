@@ -138,7 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireRate: 0
-  Damage: 20
+  Damage: 25
+  BulletCost: 1
   Force: 200
   Range: 20
   EffectSpawnRate: 10

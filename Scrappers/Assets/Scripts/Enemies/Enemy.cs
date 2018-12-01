@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour {
     public AudioClip destroySound;
     public Transform destroyParticals;
     public StatusIndicator statusIndicator;
+    public int minimumDrops = 0;
     public Transform[] itemDrops;
     private bool shuttingDown = false;
     private Transform target;
@@ -66,7 +67,7 @@ public class Enemy : MonoBehaviour {
             target = this.gameObject.GetComponent<EnemyAI>().target;
             if (itemDrops.Length > 0){
                 int _maxDrops = itemDrops.Length;
-                int _numberDrops = Random.Range(1, _maxDrops);
+                int _numberDrops = Random.Range(minimumDrops, _maxDrops);
                 for (int i = 0; i < _numberDrops; i++){
                     Transform _droppedItem = Instantiate(itemDrops[Random.Range(0, _maxDrops)], transform.position, transform.rotation);
                     Vector3 _rotDirection = Vector3.left;

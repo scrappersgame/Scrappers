@@ -31,6 +31,7 @@ public class GameMaster : MonoBehaviour {
     public float masterVolume = 0.5f;               // why is it so loud?
     public Scene currentScene;                      // where am I right now?
     private AudioSourceCrossfade _musicSource;      // where is that music coming from?
+    private bool playerSpawning = false;            // is the player spawning rn?
 
     void Awake (){
         // setting up gm object so this can be used by any script
@@ -135,8 +136,10 @@ public class GameMaster : MonoBehaviour {
 		Destroy (spawnObj.gameObject, 3);
         // tell the camera who to follow
 		CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = playerObj.transform;
-        // activate first item in hotbar
+        // respawning has a cost
         playerObj.GetComponent<Player>().RemoveScrap(50);
+        // reset spawning variable
+        playerSpawning = false;
     }
     // Spawn method to call the Spawn coroutine because you can't call a subroutine from another script
     public void SpawnItem(GameObject _spawnItem, int spawnDelay){
@@ -167,22 +170,26 @@ public class GameMaster : MonoBehaviour {
 
     // we all gotta die some day
 	public static void KillPlayer (Player player){
-        // Where did I die?
-        Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
-        Quaternion playerRotation = player.transform.rotation;
-        // creating the scrapper
-        Transform scrapperObj = Instantiate(gm.scrapperPrefab, playerPosition, playerRotation);
-        // camera follows scrapper
-        gm.CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = scrapperObj;
-        // setting scrap value of scrapper
-        scrapperObj.GetComponent<Pickup>().ScrapValue = Mathf.Clamp(PlayerMaster.stats.currentScrap + 50, 20, PlayerMaster.stats.maxScrap);
-        scrapperObj.GetComponent<ScrapperPickup>().maxScrap = PlayerMaster.stats.maxScrap;
-        player.RemoveScrap(PlayerMaster.stats.currentScrap);
-        // creating the death particles
-        Transform deathParticleObj = Instantiate(gm.deathPrefab, player.transform.position, player.transform.rotation);
-        Destroy(deathParticleObj.gameObject, 3);
-        Destroy(player.gameObject);
-		gm.SpawnPlayer (2); // breathing time.
+        if (!gm.playerSpawning)
+        {
+            gm.playerSpawning = true;
+            // Where did I die?
+            Vector3 playerPosition = new Vector3(player.transform.position.x, player.transform.position.y + 1, player.transform.position.z);
+            Quaternion playerRotation = player.transform.rotation;
+            // creating the scrapper
+            Transform scrapperObj = Instantiate(gm.scrapperPrefab, playerPosition, playerRotation);
+            // camera follows scrapper
+            gm.CamController.GetComponent<CinemachineVirtualCamera>().m_Follow = scrapperObj;
+            // setting scrap value of scrapper
+            scrapperObj.GetComponent<Pickup>().ScrapValue = Mathf.Clamp(PlayerMaster.stats.currentScrap + 50, 20, PlayerMaster.stats.maxScrap);
+            scrapperObj.GetComponent<ScrapperPickup>().maxScrap = PlayerMaster.stats.maxScrap;
+            player.RemoveScrap(PlayerMaster.stats.currentScrap);
+            // creating the death particles
+            Transform deathParticleObj = Instantiate(gm.deathPrefab, player.transform.position, player.transform.rotation);
+            Destroy(deathParticleObj.gameObject, 3);
+            Destroy(player.gameObject);
+            gm.SpawnPlayer(2); // breathing time.
+        }
 	}
 
     // die Die DIE
