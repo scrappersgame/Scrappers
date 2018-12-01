@@ -133,7 +133,10 @@ public class EnemyAI : MonoBehaviour {
         dir *= speed * Time.fixedDeltaTime;
 
         //move the ai
-        rb.AddForce(dir, fMode);
+        if (!GameMaster.gm.paused && !GameMaster.gm.speaking)
+        {
+            rb.AddForce(dir, fMode);
+        }
 
         float dist = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
         if (dist < nextWaypointDistance){

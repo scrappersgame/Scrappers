@@ -55,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.01
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -133,7 +133,6 @@ MonoBehaviour:
   speed: 100
   fMode: 1
   itemPrefab: {fileID: 1639532615350988, guid: ad48542c26b724659bc4b3a633a5ec8d, type: 2}
-  pickupPrefab: {fileID: 1084755570683922}
 --- !u!212 &212527129381896998
 SpriteRenderer:
   m_ObjectHideFlags: 1
