@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class meleeWeapon : MonoBehaviour {
+public class meleeWeapon : MonoBehaviour
+{
 
     public int damageAmount = 5;
     public float swingRate = 3f;
     private ArmRotation armRotation;
+    private bool swinging = false;
 
     private void Update()
     {
@@ -22,28 +24,49 @@ public class meleeWeapon : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        float masterVolume = GameMaster.gm.masterVolume;
-        Enemy _enemy = collision.collider.GetComponent<Enemy>();
-        if (_enemy != null)
+        if (swinging)
         {
-            _enemy.DamageEnemy(damageAmount);
-            AudioSource.PlayClipAtPoint(_enemy.hitSound, collision.collider.transform.position, masterVolume);
-        }
-        else if (collision.transform.parent != null)
-        {
-            _enemy = collision.transform.parent.GetComponent<Enemy>();
+            float masterVolume = GameMaster.gm.masterVolume;
+            Enemy _enemy = collision.collider.GetComponent<Enemy>();
             if (_enemy != null)
             {
-                _enemy.DamageEnemy(damageAmount); //Damage enemy
-                                           //create sound at hitpoint
+                _enemy.DamageEnemy(damageAmount);
                 AudioSource.PlayClipAtPoint(_enemy.hitSound, collision.collider.transform.position, masterVolume);
+            }
+            Vector2 hitPoint = collision.GetContact(0).point;
+            Vector3 hitPosition = new Vector3(hitPoint.x, hitPoint.y, 0);
+            Destructible destructible = collision.collider.GetComponent<Destructible>();
+            if (destructible != null)
+            {
+                destructible.DamageTile(damageAmount, hitPoint);
+                AudioSource.PlayClipAtPoint(destructible.hitSound, hitPosition, masterVolume);
+            }
+            else if (collision.transform.parent != null)
+            {
+                _enemy = collision.transform.parent.GetComponent<Enemy>();
+                if (_enemy != null)
+                {
+                    _enemy.DamageEnemy(damageAmount); //Damage enemy
+                                                      //create sound at hitpoint
+                    AudioSource.PlayClipAtPoint(_enemy.hitSound, collision.collider.transform.position, masterVolume);
+                }
             }
         }
     }
-    void Swing(){
-        if(armRotation == null){
+    void Swing()
+    {
+        if (armRotation == null)
+        {
             armRotation = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ArmRotation>();
         }
         armRotation.SwingArm();
+        swinging = true;
+        StartCoroutine(StopSwinging(1f / swingRate));
+    }
+    IEnumerator StopSwinging(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        swinging = false;
+
     }
 }
