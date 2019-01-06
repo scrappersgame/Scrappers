@@ -102,6 +102,13 @@ public class GameMaster : MonoBehaviour {
             paused = true;
 			PauseGame();
         }
+        // listening for heal button
+        bool healButton = Input.GetKey(KeyCode.LeftShift);
+        if (healButton && !paused)
+        {
+            Player player = playerObj.GetComponent<Player>();
+            player.HealFromScrap(1);
+        }
 
         // removing extra players (for now)
         int playerCount = GameObject.FindGameObjectsWithTag("Player").Length;

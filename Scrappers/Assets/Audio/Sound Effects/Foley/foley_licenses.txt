@@ -1,0 +1,79 @@
+﻿Sounds used:
+
+“104373__rutgermuller__metallic-pipe-hits-on-concrete-in-basement”
+
+https://freesound.org/people/RutgerMuller/sounds/104373/
+
+
+“426849__bibow__steel-hollow-pipe-on-concrete-indoor-8-impacts”
+
+https://freesound.org/people/Bibow/sounds/426849/
+
+
+“321477__dslrguide__concrete-hit”
+
+https://freesound.org/people/dslrguide/sounds/321477/
+
+
+“336023__adamgryu__rocks”
+
+https://freesound.org/people/adamgryu/sounds/336023/
+
+
+“174633__altfuture__hitting-wood”
+
+https://freesound.org/people/altfuture/sounds/174633/
+
+
+Sounds made:
+
+“104373__rutgermuller__metallic-pipe-hits-on-concrete-in-basement” used in
+
+pipe_1.wav
+
+pipe_2.wav
+
+pipe_on_concrete_1.wav
+
+pipe_on_concrete_2.wav
+
+
+“426849__bibow__steel-hollow-pipe-on-concrete-indoor-8-impacts” used in
+
+pipe_1.wav
+
+pipe_2.wav
+
+pipe_on_concrete_1.wav
+
+pipe_on_concrete_2.wav
+
+pipe_on_wood_1.wav
+
+pipe_on_wood_2.wav
+
+
+“321477__dslrguide__concrete-hit” used in
+
+pipe_on_concrete_1.wav
+
+pipe_on_concrete_2.wav
+
+pipe_on_wood_1.wav
+
+pipe_on_wood_2.wav
+
+
+“336023__adamgryu__rocks” used in
+
+pipe_on_concrete_1.wav
+
+pipe_on_concrete_2.wav
+
+
+“174633__altfuture__hitting-wood” used in
+
+pipe_on_wood_1.wav
+
+pipe_on_wood_2.wav
+

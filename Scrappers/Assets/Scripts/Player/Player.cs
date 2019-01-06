@@ -34,11 +34,27 @@ public class Player : MonoBehaviour {
             DamagePlayer (PlayerMaster.stats.currentHealth);
         }
     }
-	public void DamagePlayer (int damage) {
+    public void DamagePlayer(int damage)
+    {
         PlayerMaster.stats.currentHealth -= damage;
-        if (PlayerMaster.stats.currentHealth <= 0){
-			GameMaster.KillPlayer(this);
-		}
+        if (PlayerMaster.stats.currentHealth <= 0)
+        {
+            GameMaster.KillPlayer(this);
+        }
+        if (playerStatus != null)
+        {
+            playerStatus.SetHealth(PlayerMaster.stats.currentHealth, PlayerMaster.stats.maxHealth);
+        }
+    }
+    public void HealPlayer (int amount) {
+        if (PlayerMaster.stats.currentHealth < PlayerMaster.stats.maxHealth)
+        {
+            PlayerMaster.stats.currentHealth += amount;
+        }
+        if (PlayerMaster.stats.currentHealth > PlayerMaster.stats.maxHealth)
+        {
+            PlayerMaster.stats.currentHealth = PlayerMaster.stats.maxHealth;
+        }
         if (playerStatus != null)
         {
             playerStatus.SetHealth(PlayerMaster.stats.currentHealth, PlayerMaster.stats.maxHealth);
@@ -55,11 +71,19 @@ public class Player : MonoBehaviour {
         currentItem = _newItem;
         
     }
+    public void HealFromScrap(int amount)
+    {
+        if (PlayerMaster.stats.currentHealth < PlayerMaster.stats.maxHealth && PlayerMaster.stats.currentScrap >= amount)
+        {
+            RemoveScrap(amount);
+            HealPlayer(amount);
+        }
+    }
     public void RemoveScrap(int value)
     {
         PlayerMaster.stats.currentScrap -= value;
         playerStatus.SetScrap(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
-        if(PlayerMaster.stats.currentScrap > 0)
+        if (PlayerMaster.stats.currentScrap > 0)
             ScrapStatus.SetHealth(PlayerMaster.stats.currentScrap, PlayerMaster.stats.maxScrap);
     }
     public void AddScrap(int value)

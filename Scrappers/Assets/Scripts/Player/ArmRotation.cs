@@ -14,7 +14,7 @@ public class ArmRotation : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Time.timeScale > 0)
+        if (Time.timeScale > 0 && !GameMaster.gm.speaking)
         {
             Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             xDifference = mouseWorldPosition.x - transform.parent.position.x;

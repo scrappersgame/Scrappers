@@ -113,8 +113,10 @@ public class Weapon : MonoBehaviour {
                 Destructible destructible = hit.collider.GetComponent<Destructible>();
                 if (destructible != null)
                 {
-                    destructible.DamageTile(Damage, hitPoint);
-                    Vector3 hitPosition = new Vector3(hitPoint.x, hitPoint.y, 0);
+                    float hitPointDist = (firePointPosition - hit.point).magnitude;
+                    Vector2 tilehitPoint = firePoint.position + hitAngle * (hitPointDist + .1f);
+                    destructible.DamageTile(Damage, tilehitPoint);
+                    Vector3 hitPosition = new Vector3(tilehitPoint.x, tilehitPoint.y, 0);
                     AudioSource.PlayClipAtPoint(destructible.hitSound, hitPosition, masterVolume);
                 }
                 else if (hit.transform.parent != null)

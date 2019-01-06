@@ -246,3 +246,7 @@
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.pdb
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache
 /Users/jfrizze/Gits/Personal/Scrappers/Scrappers/obj/Debug/Assembly-CSharp.csproj.CopyComplete
+D:\gits\Scrappers\Scrappers\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\gits\Scrappers\Scrappers\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\gits\Scrappers\Scrappers\obj\Debug\Assembly-CSharp.dll
+D:\gits\Scrappers\Scrappers\obj\Debug\Assembly-CSharp.pdb

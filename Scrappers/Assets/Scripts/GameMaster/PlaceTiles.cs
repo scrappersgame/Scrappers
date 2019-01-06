@@ -26,7 +26,6 @@ public class PlaceTiles : MonoBehaviour {
 		cam = Camera.main;
         camHorizontalExtend = cam.orthographicSize * Screen.width / Screen.height;
         camVerticalExtend = cam.orthographicSize * Screen.height / Screen.width;
-        theTileMap = GameObject.FindGameObjectWithTag("TileMap").GetComponent<Tilemap>();
         gg = AstarData.active.data.gridGraph;
         currentCell = theTileMap.WorldToCell(cam.transform.position);
 		groundLevel = -1;
