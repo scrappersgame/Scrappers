@@ -41,5 +41,9 @@ Hal: Welp, looks like mosta the smaller bits have already been scrapped up by ot
 
 === give_gun
 Hal: Sure are workin up a sweat swinging that pipe around. Head back to yur hut and you'll find something in your body scrapper that should make the going a mite bit quicker.
+-> END
+
+=== enter_building
+Hal: I don't think you're supposed to be in here, boss. I just got an APB from the FAT-Es with your decription, so you might wanna watch out for their drones.
 
 ->END
