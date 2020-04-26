@@ -1,9 +1,9 @@
-Scrappers/[Ll]ibrary/
-Scrappers/[Tt]emp/
-Scrappers/[Oo]bj/
-Scrappers/[Bb]uild/
-Scrappers/[Bb]uilds/
-Scrappers/Assets/AssetStoreTools*
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
 
 # Visual Studio cache directory
 .vs/
