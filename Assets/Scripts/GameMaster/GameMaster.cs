@@ -61,7 +61,7 @@ public class GameMaster : MonoBehaviour {
         }
         yield return new WaitForSeconds(0.1f);
         // skybox controls the camera limits, but need to be in persistent space
-        UpdateSkybox();
+        // UpdateSkybox();
         gm.GetComponent<Fading>().BeginFade(-1);
     }
 
@@ -75,7 +75,7 @@ public class GameMaster : MonoBehaviour {
         for (int i = 0; i < _newSkyBox.points.Length; i++){
 
             //transforming points to world coordinates
-            _skypoints[i] = new Vector2(_newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).x, _newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).y + yDifference);
+            _skypoints[i] = new Vector2(_newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).x, _newSkyBox.transform.TransformPoint(_newSkyBox.points[i]).y);
             if (_skypoints[i].y < mainSkyBox.transform.position.y)
             {
                 // if y of point is lower, set the difference and move the skybox
@@ -257,7 +257,8 @@ public class GameMaster : MonoBehaviour {
         // finally got there, lets remember where we are...
         gm.currentScene = SceneManager.GetSceneByName(_sceneName);
         // what are the limits to the sky?
-        UpdateSkybox();
+        mainSkyBox.transform.position = new Vector3(mainSkyBox.transform.position.x, mainSkyBox.transform.position.y - 1f, mainSkyBox.transform.position.z);
+        // UpdateSkybox();
         // back to life, back to reality
         gm.GetComponent<Fading>().BeginFade(-1);
     }

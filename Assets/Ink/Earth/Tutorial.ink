@@ -35,15 +35,26 @@ Hal: Now let’s get you out there scrappin’ so you can start payin’ off sum
 
 === leave_hut
 // start dialog after leaving hut.
-Hal: Welp, looks like mosta the smaller bits have already been scrapped up by others. Looks like you got your work cut out for ya, kid. See if you can find something you can use to whack somethin with, and we’ll go from there.
+Hal: Welp, looks like mosta the smaller bits have already been scrapped up by others. Looks like you got your work cut out for ya, kid. There's a pipe over there you can use to whack stuff with. Pick it up and give it a swing.
 
 ->END
 
 === give_gun
-Hal: Sure are workin up a sweat swinging that pipe around. Head back to yur hut and you'll find something in your body scrapper that should make the going a mite bit quicker.
+Hal: Ya sure are workin up a sweat swinging that pipe around. Head back to the start and you'll find something in your body scrapper that should make the going a bit quicker.
 -> END
 
 === enter_building
 Hal: I don't think you're supposed to be in here, boss. I just got an APB from the FAT-Es with your decription, so you might wanna watch out for their drones.
+
+->END
+
+=== ship_intro
+???: \\ ERROR \\ CRITICAL DAMAGE \\ REPAIR REQUIRED \\ INPUT REQUIRED SCRAP TO CONTINUE
+* Who are you?[] Who's speaking right now?
+    PeeCee: Oh, sorry for yelling earlier, I'm used to people just ignoring me. I am PeeCee, the integrated AI for the ship you are currently standing in.
+    * * How[?] do I input scrap?
+        PeeCee: If you have a device that you can use to project scrap in the direction of my hull, I can handle the integration from there.
+* How[?] do I input scrap?
+    ???: If you have a device that you can use to project scrap in the direction of my hull, I can handle the integration from there.
 
 ->END

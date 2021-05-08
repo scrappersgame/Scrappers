@@ -10,6 +10,7 @@ public class Pickup : MonoBehaviour {
     public GameObject itemPrefab;
     private Transform target;
     private Rigidbody2D rb;
+    private bool pickedUp = false;
 
     private void Awake()
     {
@@ -27,13 +28,17 @@ public class Pickup : MonoBehaviour {
     {
         if (coll.gameObject.tag == "Player")
         {
-            Player _player = coll.gameObject.GetComponent<Player>();
-            _player.AddScrap(ScrapValue);
-            if (itemPrefab != null)
+            if (!pickedUp)
             {
-                _player.AddItem(itemPrefab, this.gameObject);
+                pickedUp = true;
+                Player _player = coll.gameObject.GetComponent<Player>();
+                _player.AddScrap(ScrapValue);
+                if (itemPrefab != null)
+                {
+                    _player.AddItem(itemPrefab, this.gameObject);
+                }
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
     }
     void FixedUpdate(){

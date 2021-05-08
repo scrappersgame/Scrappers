@@ -28,6 +28,7 @@ public class StoryMaster : MonoBehaviour {
     private bool nameGiven = false;             // have we given our name yet?
     public bool gunGiven = false;               // have we gotten the gun yet?
     public bool dronesTriggered = false;        // have the drones been triggered yet?
+    public bool shipIntroduced = false;         // has the ship been introduced yet?
 
     private void Awake()
     {
@@ -72,6 +73,13 @@ public class StoryMaster : MonoBehaviour {
         // only called when scrap >= 50
         story.ChoosePathString("enter_building");
         dronesTriggered = true;
+        RefreshView();
+    }
+    public void ShipIntro()
+    {
+        // only called when scrap >= 50
+        story.ChoosePathString("ship_intro");
+        shipIntroduced = true;
         RefreshView();
     }
 

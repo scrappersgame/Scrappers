@@ -31,6 +31,7 @@ public class PlaceTiles : MonoBehaviour {
 		groundLevel = -1;
 		placeCell = new Vector3Int ( currentCell.x, groundLevel, currentCell.z);
 		theTileMap.SetTile (placeCell, TileToPlace);
+		SpawnFloor();
 	}
 
 
