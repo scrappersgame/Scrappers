@@ -21,7 +21,7 @@ public class MainMenu : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         Vector3 followerp = follower.transform.position;
         follower.GetComponent<IntroMovement>().enabled = false;
-        follower.transform.position = new Vector3(0, 0, 0);
+        follower.transform.position = new Vector3(0, 0.5f, 0);
         GameMaster.gm.spawnPoint = follower;
         GameMaster.gm.SpawnPlayer(0);
         GameMaster.gm.paused = false;
